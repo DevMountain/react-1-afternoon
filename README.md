@@ -466,10 +466,10 @@ export default class Sum extends Component {
 
 Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In this step we'll start with the first topic: `EvenAndOdd`.
 
-The problem summary: Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
-
-The component outline: Render one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
-
 ### Instructions
+
+<b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
+
+<b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
 
 Open `EvenAndOdd.js`
