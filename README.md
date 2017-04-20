@@ -27,11 +27,11 @@ In this step we are going to dive into the functionality of the application. If 
 
 Import the necssary items from 'react' and create a `TopicBrowser` class that renders a `<p>` element that says "Hello World". Then export `TopicBrowser`, import it in `App.js`, and render `TopicBrowser` in `App.js`. 
 
-### Detailed Instructions
-
 <details>
 
 <summary> Detailed Instructions </summary>
+
+<br />
 
 Let's start by importing `React, { Component }` from 'react'. This will allow use to use JSX and create a class that extends on `Component`.
 
