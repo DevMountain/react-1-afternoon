@@ -646,6 +646,106 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 
 <summary> Detailed Instructions </summary>
 
+Let's begin by rendering our component's outline.
+
+```js
+  render() {
+    return (
+      <div>
+        <p></p>
+        <input></input>
+        <button> Filter </button>
+        <p></p>
+      </div>
+    )
+  }
+```
+
+Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep tracck of what the user input is, our unfiltered array, and our filtered array. 
+
+```js
+  constructor() {
+    super();
+
+    this.state = {
+      employees: [
+        {
+          name: 'Jimmy Joe',
+          title: 'Hack0r',
+          age: 12,
+        },
+        {
+          name: 'Jeremy Schrader',
+          age: 24,
+          hairColor: 'brown'
+        },
+        {
+          name: 'Carly Armstrong',
+          title: 'CEO',
+        }
+      ],
+
+      userInput: '',
+      filteredEmployees: []
+    }
+  }
+```
+
+Next let's update our `<p>` elements to display our unfiltered and filtered array of employees.
+
+```js
+  render() {
+    return (
+      <div>
+        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
+        <input></input>
+        <button> Filter </button>
+        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+Next let's update our `input` element to handle user input.
+
+```js
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button> Filter </button>
+        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+Finally let's update our `button` element to handle filtering our employee array.
+
+```js
+  filterEmployees(prop) {
+
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
+
 </details>
 
 ### Solution
