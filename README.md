@@ -638,4 +638,7 @@ In this step we are going to do the same thing but now with our component `Filte
 
 <b>The problem summary:</b> Using a pre-determined array of objects, filter out objects that do not have a given property. Display a new array populated with the objects that do have the given property.
 
-<b>The component outline</b>: 
+<b>The component outline</b>: Render one `input` element, one `button` element, and two `<p>` elements.
+
+Let's begin by rendering our component's outline. The use state to keep track of three properties: `unFiltertedObject`, `userInput`, and `filteredObject`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredObject`. Assign one `<p>` element the value of `unFilteredObject` and the other `<p>` element the value of `filteredObject`.
+
