@@ -520,7 +520,7 @@ render() {
 }
 ```
 
-What's JSON.stringify? This is not a necassary addition, but without it when your array would not display as [1,2,3,4] but rather 1234. JSON.stringify gives our display a more readable format. 
+What's `JSON.stringify`? This is not a necassary addition, but without it when your array would not display as [1,2,3,4] but rather 1234. `JSON.stringify` gives our display a more readable format. You could just do `this.state.evenArray` or `this.state.oddArray` if you want to.
 
 Next let's update our `input` element to handle user input. In React you can use the `onChange` attribute that calls a function every time a user types in the `input` field. 
 
