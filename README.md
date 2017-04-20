@@ -127,3 +127,44 @@ export default App;
 
 </details>
 
+## Solution
+
+<details>
+
+<summary> <code> App.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+import './App.css';
+import TopicBrowser from './components/TopicBrowser/TopicBrowser'
+
+class App extends Component {
+  render() {
+    return (
+      <TopicBrowser />
+    )
+  }
+}
+
+export default App;
+```
+
+</details>
+
+<details>
+
+<summary> <code> TopicBrowser.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class TopicBrowser extends Component {
+  render() {
+    return (
+      <p> Hello World </p>
+    )
+  }
+}
+```
+
+</details>
