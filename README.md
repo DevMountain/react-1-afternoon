@@ -211,6 +211,76 @@ export default class EvenAndOdd extends Component {
 }
 ```  
 
+<summary> <code> FilterObject.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class FilterObject extends Component {
+  render() {
+    return (
+      <p> FilterObject Component </p>
+    )
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary> <code> FilterString.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class FilterString extends Component {
+  render() {
+    return (
+      <p> FilterString Component </p>
+    )
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary> <code> Palindrome.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class Palindrome extends Component {
+  render() {
+    return (
+      <p> Palindrome Component </p>
+    )
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary> <code> Sum.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class Sum extends Component {
+  render() {
+    return (
+      <p> Sum Component </p>
+    )
+  }
+}
+```
+
+</details>
+
 After you applied the same concepts to the 4 other javascript files in the Topics folder, we'll then import them into `TopicBrowser.js`. Just like how we imported `TopicBrowser` into `App.js` we'll do:
 
 ```js
@@ -322,7 +392,7 @@ import React, { Component } from 'react';
 export default class FilterObject extends Component {
   render() {
     return (
-      <p> EvenAndOdd Component </p>
+      <p> FilterObject Component </p>
     )
   }
 }
