@@ -576,7 +576,7 @@ How you solve the toy problem is up to you, if you can't figure it out, check ou
 
 ### Solution
 
-There is more than one way to solve the toy problem. As long as your method separates the numbers into two different arrays correctly you are good.
+There is more than one way to solve the toy problem. As long as your method separates the numbers into two different arrays correctly you are good. Check out the detailed instructions section for this step for any clarification.
 
 <details>
 
