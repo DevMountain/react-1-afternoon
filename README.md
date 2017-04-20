@@ -192,10 +192,25 @@ Create a basic outline for each topic component file inside of `src/Topics` and 
 Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered. 
 
 Creating a React component:
-* import React, { Component } from 'react'
+* `import React, { Component } from 'react'`
 * Create the class for your new component. The format is: `class ClassNameGoesHere extends Component {}`
 * Use the `render() {}` method to get elements to `render` onto the DOM. JSX goes inside a `return` statement of the `render() {}` method.
 * Export your newly created class either on the same line of it's declaration or at the bottom of the file.
 
+Here is what the `EvenAndOdd` component will look like applying these bullet points.
+
+```js
+import React, { Component } from 'react';
+
+export default class EvenAndOdd extends Component {
+  render() {
+    return (
+      <p> EvenAndOdd Component </p>
+    )
+  }
+}
+```  
+
+For a more in-depth explanation re-visit the detailed instructions of step 1.
 
 </details>
