@@ -283,6 +283,8 @@ export default class Sum extends Component {
 
 </details>
 
+<br />
+
 After you applied the same concepts to the 4 other javascript files in the Topics folder, we'll then import them into `TopicBrowser.js`. Just like how we imported `TopicBrowser` into `App.js` we'll do:
 
 ```js
