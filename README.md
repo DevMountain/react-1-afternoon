@@ -211,6 +211,8 @@ export default class EvenAndOdd extends Component {
 }
 ```  
 
+<details>
+
 <summary> <code> FilterObject.js </code> </summary>
 
 ```js
