@@ -175,7 +175,7 @@ export default class TopicBrowser extends Component {
 
 ### Summary
 
-Now that our TopicBrowser component is created and we know everything has been exported and imported correctly, let's remove the `<p>` tag and start focusing on the functionality of the `TopicBrowser` component.
+Now that our `TopicBrowser` component is created and we know everything has been exported and imported correctly, let's remove the `<p>` element and start focusing on the functionality of the `TopicBrowser` component.
 
 In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import those topic components into our `TopicBrowser` component.
 
@@ -191,8 +191,11 @@ Create a basic outline for each topic component file inside of `src/Topics` and 
 
 Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered. 
 
-<br />
-
+Creating a React component:
+* import React, { Component } from 'react'
+* Create the class for your new component. The format is: `class ClassNameGoesHere extends Component {}`
+* Use the `render() {}` method to get elements to `render` onto the DOM. JSX goes inside a `return` statement of the `render() {}` method.
+* Export your newly created class either on the same line of it's declaration or at the bottom of the file.
 
 
 </details>
