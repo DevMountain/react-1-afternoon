@@ -474,4 +474,70 @@ Now that our topic components are created and we know they are exported and impo
 
 ### Instructions
 
-Let's begin by meeting the component outline. We'll need one `input` element, one `button` element, and two `<p>` elements. Use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the input field update the value of `userInput` while the user types. Have the button call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+Let's begin by meeting the component outline. We'll need one `input` element, one `button` element, and two `<p>` elements. Use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+
+<details>
+
+<summary> Detailed Instructions </summary>
+
+</details>
+
+### Solution
+
+There is more than one way to solve the toy problem. As long as your method separates the numbers into two different arrays correctly you are good.
+
+<details>
+
+<summary> <code> EvenAndOdd.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class EvenAndOdd extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      evenArray: [],
+      oddArray: [],
+      userInput: ''
+    }
+  }
+
+  handleChange(e) {
+    this.setState({ userInput: e.target.value });
+  }
+
+  assignEvenAndOdds(userInput) {
+    var arr = userInput.split(',');
+    var evens = [];
+    var odds = [];
+
+    for ( var i = 0; i < arr.length; i++ ) {
+      if ( arr[i] % 2 === 0 ) {
+        evens.push( parseInt(arr[i], 10) );
+      } else {
+        odds.push( parseInt(arr[i], 10) );
+      }
+    }
+    
+    this.setState({ evenArray: evens, oddArray: odds });
+  }
+
+  render() {
+    return (
+      <div>
+        <h4> Even and Odds </h4>
+        <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
+        <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
+        <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+        <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
+        <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+      </div>
+    )
+  }
+}
+```
+
+</details>
