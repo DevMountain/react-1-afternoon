@@ -470,7 +470,7 @@ Now that our topic components are created and we know they are exported and impo
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component outline:</b> Render one `<h4>` element ( the header for the toy problem ), one `<p>` element ( the description for the toy problem ), one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
+<b>The component outline:</b> Render one `<h4>` element ( the header for the toy problem ), one `<p>` element ( the description for the toy problem ), one `input` element, one `button` element, and two `<p>` elements. 
 
 Let's begin by meeting the component outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
 
