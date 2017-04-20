@@ -470,12 +470,7 @@ Now that our topic components are created and we know they are exported and impo
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component header and description:</b> To keep track of which component is which toy problem use the following:
-
-* `<h4> Even and Odds </h4>`
-* `<p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>`
-
-<b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
+<b>The component outline:</b> Render one `<h4>` element ( the header for the toy problem ), one `<p>` element ( the description for the toy problem ), one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
 
 ### Instructions
 
@@ -484,6 +479,8 @@ Let's begin by meeting the component outline. We'll need one `input` element, on
 <details>
 
 <summary> Detailed Instructions </summary>
+
+<br />
 
 Let's begin by meeting the component outline. We'll need one `input` element, one `button` element, and two `<p>` elements. We'll put these elements in the `return` of the `render` method. Remember that only one element can be returned so we'll nest our elements in a `<div>`.
 
