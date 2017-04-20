@@ -211,6 +211,54 @@ export default class EvenAndOdd extends Component {
 }
 ```  
 
-For a more in-depth explanation re-visit the detailed instructions of step 1.
+After you applied the same concepts to the 4 other javascript files in the Topics folder, we'll then import them into `TopicBrowser.js`. Just like how we imported `TopicBrowser` into `App.js` we'll do:
+
+```js
+import React, { Component } from 'react';
+
+// Topics
+import EvenAndOdd from '../Topics/EvenAndOdd'
+import FilterObject from '../Topics/FilterObject'
+import FilterString from '../Topics/FilterString'
+import Palindrome from '../Topics/Palindrome'
+import Sum from '../Topics/Sum'
+
+export default class TopicBrowser extends Component {
+  render() {
+    return (
+      
+    )
+  }
+}
+```
+
+Now that they are imported into our `TopicBrowser` component we can render them in our `return`. Similiar to how we rendered `TopicBrowser` in `App.js` we'll wrap each component we imported in `< />`. Since we are trying to `render` more than component we'll have to wrap the components in a `div`. The `return` of a `render` method can only return one element, but there is no limit to how much you can nest in that one element. Your `TopicBrowser` should look like:
+
+```js
+import React, { Component } from 'react';
+
+// Topics
+import EvenAndOdd from '../Topics/EvenAndOdd'
+import FilterObject from '../Topics/FilterObject'
+import FilterString from '../Topics/FilterString'
+import Palindrome from '../Topics/Palindrome'
+import Sum from '../Topics/Sum'
+
+export default class TopicBrowser extends Component {
+  render() {
+    return (
+      <div>
+        <EvenAndOdd />
+        <FilterObject />
+        <FilterString />
+        <Palindrome />
+        <Sum />
+      </div>
+    )
+  }
+}
+```
 
 </details>
+
+### Solution
