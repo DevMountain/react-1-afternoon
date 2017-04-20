@@ -168,3 +168,5 @@ export default class TopicBrowser extends Component {
 ```
 
 </details>
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1-1.png" />
