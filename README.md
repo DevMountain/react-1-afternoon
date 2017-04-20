@@ -640,5 +640,81 @@ In this step we are going to do the same thing but now with our component `Filte
 
 <b>The component outline</b>: Render one `input` element, one `button` element, and two `<p>` elements.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFiltertedObject`, `userInput`, and `filteredObject`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredObject`. Assign one `<p>` element the value of `unFilteredObject` and the other `<p>` element the value of `filteredObject`.
+Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFiltertedArray`, `userInput`, and `filteredArray`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredObject`. Assign one `<p>` element the value of `unFilteredObject` and the other `<p>` element the value of `filteredObject`.
 
+<details>
+
+<summary> Detailed Instructions </summary>
+
+</details>
+
+### Solution
+
+There is more than one way to solve the toy problem. As long as your method filters the array correctly you are good. Check out the detailed instructions section for this step for any clarification.
+
+<details>
+
+<summary> <code> FilterObject.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class FilterObject extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      employees: [
+        {
+          name: 'Jimmy Joe',
+          title: 'Hack0r',
+          age: 12,
+        },
+        {
+          name: 'Jeremy Schrader',
+          age: 24,
+          hairColor: 'brown'
+        },
+        {
+          name: 'Carly Armstrong',
+          title: 'CEO',
+        }
+      ],
+
+      userInput: '',
+      filteredEmployees: []
+    }
+  }
+
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  filterEmployees(prop) {
+    var employees = this.state.employees;
+    var filteredEmployees = [];
+    
+    for ( var i = 0; i < employees.length; i++ ) {
+      if ( employees[i].hasOwnProperty(prop) ) {
+        filteredEmployees.push(employees[i]);
+      }
+    }
+
+    this.setState({ filteredEmployees: filteredEmployees });
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      </div>
+    )
+  }
+}
+```
+
+</details>
