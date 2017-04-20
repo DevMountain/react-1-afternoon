@@ -12,8 +12,8 @@ export default class EvenAndOdd extends Component {
     }
   }
 
-  handleChange(e) {
-    this.setState({ userInput: e.target.value });
+  handleChange(val) {
+    this.setState({ userInput: val });
   }
 
   assignEvenAndOdds(userInput) {
@@ -37,7 +37,7 @@ export default class EvenAndOdd extends Component {
       <div>
         <h4> Even and Odds </h4>
         <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
-        <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
         <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
         <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
         <p> Odds: { JSON.stringify(this.state.oddArray) } </p>

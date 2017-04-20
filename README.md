@@ -480,17 +480,62 @@ Let's begin by meeting the component outline. Then use `state` to keep track of 
 
 <br />
 
-Let's begin by meeting the component outline.
+Let's begin by meeting the component outline in our `return` of the `render` method.
 
 ```js
 render() {
-  <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
-  <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+  <h4> Even and Odds </h4>
+  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
+  <input></input>
+  <button> Split </button>
+  <p></p>
+  <p></p>
+}
+```
+
+Now that we have a rough draft of every thing our component will need, let's start filling in the functionality. We will use state to keep track of what the user input is, our even's array, and our odd's array. We can use state by defining a `constructor() {}` method. Before we can use `state` we have to invoke `super`. After the invocation of `super` we can create our state object with `this.state = {}` and add our three properties to it.
+
+```js
+constructor() {
+  super();
+
+  this.state = {
+    evenArray: [],
+    oddArray: [],
+    userInput: ''
+  }
+}
+```
+
+Next, let's update our last two `<p>` elements to display our `evenArray` and `oddArray`.
+
+```js
+render() {
+  <h4> Even and Odds </h4>
+  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
+  <input></input>
+  <button> Split </button>
   <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
   <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
 }
 ```
 
+What's JSON.stringify? This is not a necassary addition, but without it when your array would not display as [1,2,3,4] but rather 1234. JSON.stringify gives our display a more readable format. 
+
+Next let's update our `input` element to handle user input. In React you can use the `onChange` attribute that calls a function every time a user types in the `input` field. 
+
+```js
+render() {
+  <h4> Even and Odds </h4>
+  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
+  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+  <button> Split </button>
+  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
+  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+}
+```
+
+What's e? e is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field the our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field.
 
 </details>
 
