@@ -470,9 +470,13 @@ Now that our topic components are created and we know they are exported and impo
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component outline:</b> Render one `<h4>` element ( the header for the toy problem ), one `<p>` element ( the description for the toy problem ), one `input` element, one `button` element, and two `<p>` elements. 
+<b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. 
 
-Let's begin by meeting the component outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+<b>Component header and description:</b> 
+* Header: Even and Odds
+* Description: Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7"
+
+Let's begin by adding a `<h4>` element for our component header and a `<p>` element for our component description. After let's add our component's outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
 
 <details>
 
@@ -480,7 +484,7 @@ Let's begin by meeting the component outline. Then use `state` to keep track of 
 
 <br />
 
-Let's begin by meeting the component outline in our `return` of the `render` method.
+Let's begin by adding a `<h4>` element for our component header and a `<p>` element for our component description. After let's add our component's outline.
 
 ```js
 render() {
