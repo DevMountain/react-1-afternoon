@@ -472,11 +472,7 @@ Now that our topic components are created and we know they are exported and impo
 
 <b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. 
 
-<b>Component header and description:</b> 
-* Header: Even and Odds
-* Description: Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7"
-
-Let's begin by adding a `<h4>` element for our component header and a `<p>` element for our component description. After let's add our component's outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+Let's begin by rendering our component's outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
 
 <details>
 
@@ -484,12 +480,10 @@ Let's begin by adding a `<h4>` element for our component header and a `<p>` elem
 
 <br />
 
-Let's begin by adding a `<h4>` element for our component header and a `<p>` element for our component description. After let's add our component's outline.
+Let's begin by rendering our component's outline.
 
 ```js
 render() {
-  <h4> Even and Odds </h4>
-  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
   <input></input>
   <button> Split </button>
   <p></p>
@@ -515,8 +509,6 @@ Next, let's update our last two `<p>` elements to display our `evenArray` and `o
 
 ```js
 render() {
-  <h4> Even and Odds </h4>
-  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
   <input></input>
   <button> Split </button>
   <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
@@ -530,8 +522,6 @@ Next let's update our `input` element to handle user input. In React you can use
 
 ```js
 render() {
-  <h4> Even and Odds </h4>
-  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
   <input onChange={ (e) => this.handleChange(e.target.value) }></input>
   <button> Split </button>
   <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
@@ -557,8 +547,6 @@ Now that our `input` functionality is finished, all that's left is getting our `
 
 ```js
 render() {
-  <h4> Even and Odds </h4>
-  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
   <input onChange={ (e) => this.handleChange(e.target.value) }></input>
   <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
   <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
@@ -624,8 +612,6 @@ export default class EvenAndOdd extends Component {
   render() {
     return (
       <div>
-        <h4> Even and Odds </h4>
-        <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
         <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
         <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
         <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
@@ -652,4 +638,4 @@ In this step we are going to do the same thing but now with our component `Filte
 
 <b>The problem summary:</b> Using a pre-determined array of objects, filter out objects that do not have a given property. Display a new array populated with the objects that do have the given property.
 
-<b>The component outline</b>: Render one `<h4>` element ( the header of the toy problem ), one `<p>` element ( the description of the toy problem ), one `<p>`
+<b>The component outline</b>: 
