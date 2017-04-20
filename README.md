@@ -15,7 +15,7 @@ After completing this project you'll have the knowledge to add more toy problems
 
 ## Setup
 
-All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. 
+All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. You can choose to keep your development server running throughout the project or just remember to run `npm start` at solution stage of each step.
 
 ## Step 1
 
