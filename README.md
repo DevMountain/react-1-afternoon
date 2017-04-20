@@ -818,3 +818,7 @@ export default class FilterObject extends Component {
 ```
 
 </details>
+
+<br /> 
+
+<b> Insert giphy here of flow once the app has been styled </b>
