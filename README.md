@@ -29,6 +29,10 @@ Import the necssary items from 'react' and create a `TopicBrowser` class that re
 
 ### Detailed Instructions
 
+<details>
+
+<summary> Detailed Instructions </summary>
+
 Let's start by importing `React, { Component }` from 'react'. This will allow use to use JSX and create a class that extends on `Component`.
 
 ```js
@@ -95,6 +99,8 @@ export default class TopicBrowser extends Component {
 
 </details>
 
+<br />
+
 Both ways are completely fine, however I'll be using the same line `export`. Now that our `export` is setup we can `import` it in `App.js` and `render` it. We can `import` components with the following format: `import ComponentNameHere from '/file_path_to_component_here'`. Therefore our `import` in `App.js` would look like:
 
 ```js
@@ -119,5 +125,5 @@ class App extends Component {
 export default App;
 ```
 
-
+</details>
 
