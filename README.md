@@ -457,3 +457,5 @@ export default class Sum extends Component {
 ```
 
 </details>
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2-1.png" />
