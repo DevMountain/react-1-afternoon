@@ -520,7 +520,7 @@ render() {
 }
 ```
 
-What's `JSON.stringify`? This is not a necassary addition, but without it when your array would not display as [1,2,3,4] but rather 1234. `JSON.stringify` gives our display a more readable format. You could just do `this.state.evenArray` or `this.state.oddArray` if you want to.
+What's `JSON.stringify`? This is not a necassary addition, but without it your array would not display as [1,2,3,4] but rather 1234. `JSON.stringify` gives our display a more readable format. You could just do `this.state.evenArray` or `this.state.oddArray` if you want to.
 
 Next let's update our `input` element to handle user input. In React you can use the `onChange` attribute that calls a function every time a user types in the `input` field. 
 
@@ -535,7 +535,38 @@ render() {
 }
 ```
 
-What's e? e is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field the our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field.
+What's `e`? `e` is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field.
+
+Let's add method on our class called `handleChange` to update our `state` property `userInput`.
+
+```js
+handleChange(val) {
+  this.setState({ userInput: val });
+}
+```
+
+Now that our input is finished, all that's left is getting our button to execute a method that solves the toy problem. In React we can execute a function on a button click by using the attribute `onClick`. Since we want to execute this method with an argument we'll nest it in an arrow function.
+
+```js
+render() {
+  <h4> Even and Odds </h4>
+  <p> Pass in a number of strings that are comma separated. For example: "1,2,3,4,5,6,7" </p>
+  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+  <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
+  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+}
+```
+
+Now whenever a user clicks our `button` element our arrow function is called which calls a method on our class called `assignEvenAndOdds` and passes in the current `userInput` on `state`. Let's create this method on our class.
+
+```js
+assignEvenAndOdds(userInput) {
+
+}
+```
+
+How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
 
 </details>
 
