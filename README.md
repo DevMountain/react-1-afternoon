@@ -535,7 +535,11 @@ render() {
 }
 ```
 
-What's `e`? `e` is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field. For example if I typed in the `input` field "1,2,3,4" then `handleChange` will be called with an argument of `"1,2,3,4"`.
+What's `e`? `e` is the event. In this instance we can use the event to get the current value inside of the `input` element. We can access this by doing `e.target.value`. With this setup every time a user types in this `input` field our arrow function gets called, capturing the event, and then calls our method on the class called `handleChange` and passes the value that's currently in the input field. For example if I typed in the `input` field "1,2" then `handleChange` will have been called three times. Every key stroke invokes `handleChange` and passes in the current value, this would look like:
+
+* First Time: `e.target.value` = "1"
+* Second Time: `e.target.value` = "1,"
+* Third Time: `e.target.value` = "1,2"
 
 Let's add a method on our class called `handleChange` to update our `state` property `userInput`.
 
