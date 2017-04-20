@@ -634,4 +634,18 @@ export default class EvenAndOdd extends Component {
 
 </details>
 
-<b> Insert video here of flow once the app has been styled </b>
+<br /> 
+
+<b> Insert giphy here of flow once the app has been styled </b>
+
+## Step 4 
+
+### Summary
+
+In this step we are going to do the same thing but now with our component `FilterObject`. 
+
+### Instructions
+
+<b>The problem summary:</b> Using a pre-determined array of objects, filter out objects that do not have a given property. Display a new array populated with the objects that do have the given property.
+
+<b>The component outline</b>: Render one `<h4>` element ( the header of the toy problem ), one `<p>` element ( the description of the toy problem ), one `<p>`
