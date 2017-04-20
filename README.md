@@ -15,7 +15,7 @@ After completing this project you'll have the knowledge to add more toy problems
 
 ## Setup
 
-All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. You can choose to keep your development server running throughout the project or just remember to run `npm start` at solution stage of each step.
+All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. You can choose to keep your development server running throughout the project or just remember to run `npm start` at the solution stage of each step.
 
 ## Step 1
 
@@ -170,3 +170,29 @@ export default class TopicBrowser extends Component {
 </details>
 
 <img src="https://github.com/DevMountain/showcase/blob/solution/readme/1-1.png" />
+
+## Step 2
+
+### Summary
+
+Now that our TopicBrowser component is created and we know everything has been exported and imported correctly, let's remove the `<p>` tag and start focusing on the functionality of the `TopicBrowser` component.
+
+In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import those topic components into our `TopicBrowser` component.
+
+### Instructions
+
+Create a basic outline for each topic component file inside of `src/Topics` and have them render a `<p>` element saying the name of the component. Then import each topic into `TopicBrowser` and render them one after another.
+
+<details>
+
+<summary> Detailed Instructions </summary>
+
+<br />
+
+Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered. 
+
+<br />
+
+
+
+</details>
