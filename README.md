@@ -472,4 +472,6 @@ Now that our topic components are created and we know they are exported and impo
 
 <b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. The `input` element will take in a string of numbers that are comma separated, the `button` element will execute a function to solve the problem, and one `<p>` element will display the odd array and the other will display the even array.
 
-Open `EvenAndOdd.js`
+### Instructions
+
+Let's begin by meeting the component outline. We'll need one `input` element, one `button` element, and two `<p>` elements. Use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the input field update the value of `userInput` while the user types. Have the button call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
