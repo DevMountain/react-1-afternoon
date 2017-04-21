@@ -998,7 +998,7 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 
 <details>
 
-<summary> Palindrome.js </summary>
+<summary> Detailed Instructions </summary>
 
 <br />
 
@@ -1147,4 +1147,60 @@ In this step we are going to build our `Sum` component.
 
 <b>The component outline:</b> Render two `input` elements, one `button` element, and one `<p>` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`.
+Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`. Have the `button` element call a method on the class that solves the toy problem and updates teh value of `sum`. Assign the `<p>` element the value of `sum`.
+
+<details>
+
+<summary> Detailed Instructions </summary>
+
+</details>
+
+### Solution
+
+<details>
+
+<summary> <code> Sum.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class Sum extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      number1: 0,
+      number2: 0,
+      sum: null
+    }
+  }
+
+  updateNumber1(val) {
+    this.setState({ number1: parseInt(val, 10) });
+  }
+
+  updateNumber2(val) {
+    this.setState({ number2: parseInt(val, 10) });
+  }
+
+  add(num1, num2) {
+    this.setState({ sum: num1 + num2 });
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <p> Sum: {this.state.sum} </p>
+      </div>
+    )
+  }
+}
+```
+
+</details>
+
+
