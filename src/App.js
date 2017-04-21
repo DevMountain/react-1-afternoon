@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
+import MuiThemeProivder from 'material-ui/styles/MuiThemeProvider';
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 
 class App extends Component {
   render() {
     return (
-      <TopicBrowser />
+      <MuiThemeProivder>
+        <TopicBrowser />
+      </MuiThemeProivder>
     )
   }
 }
