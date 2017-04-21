@@ -1000,6 +1000,8 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 
 <summary> Palindrome.js </summary>
 
+<br />
+
 Let's begin by rendering our component's outline.
 
 ```js
