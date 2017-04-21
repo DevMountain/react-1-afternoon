@@ -644,6 +644,8 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 
 <summary> Detailed Instructions </summary>
 
+<br />
+
 Let's begin by rendering our component's outline.
 
 ```js
@@ -836,6 +838,92 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 <details>
 
 <summary> Detailed Instructions </summary>
+
+<br />
+
+Let's begin by rendering our component's outline.
+
+```js
+  render() {
+    return (
+      <div>
+        <p></p>
+        <input></input>
+        <button> Filter </button>
+        <p></p>
+      </div>
+    )
+  }
+```
+
+Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep track of what the user input is, our unfiltered array, and our filtered array.
+
+```js
+  constructor() {
+    super();
+
+    this.state = {
+      names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jennifer', 'Mark', 'Maddy'],
+      userInput: '',
+      filteredNames: []
+    };
+  }
+```
+
+Next, let's update our `<p>` elements to display our unfiltered and filtered array of names.
+
+```js
+  render() {
+    return (
+      <div>
+        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
+        <input></input>
+        <button> Filter </button>
+        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+Next, let's update our `input` element to handle user input.
+
+```js
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button> Filter </button>
+        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+Finally, let's update our `button` element to handle filtering our names array.
+
+```js
+  filterNames(userInput) {
+
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      </div>
+    )
+  }
+```
+
+How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
 
 </details>
 
