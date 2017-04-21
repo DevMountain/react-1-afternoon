@@ -464,7 +464,9 @@ export default class Sum extends Component {
 
 ### Summary
 
-Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In the following steps it's important to understand that there is more than one way to solve a toy problem, if your solution doesn't match mine that's okay. In this step we'll start with the first topic: `EvenAndOdd`.
+Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In the following steps it's important to understand that there is more than one way to solve a toy problem, if your solution doesn't match mine that's okay. Also, since the following 5 components are very similiar in their structure, only step 3's detailed instructions go into great detail. The other steps after that won't go into much detail.
+
+In this step we'll start with the first topic: `EvenAndOdd`.
 
 ### Instructions
 
