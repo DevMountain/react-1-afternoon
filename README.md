@@ -1000,6 +1000,85 @@ Let's begin by rendering our component's outline. Then use state to keep track o
 
 <summary> Palindrome.js </summary>
 
+Let's begin by rendering our component's outline.
+
+```js
+  render() {
+    return (
+      <div>
+        <input></input>
+        <button> Check </button>
+        <p></p>
+      </div>
+    )
+  }
+```
+
+Now that we hae a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep track of what the user input is and if the user input is a palindrome or not.
+
+```js
+  constructor() {
+    super();
+
+    this.state = {
+      userInput: '',
+      palindrome: ''
+    };
+  }
+```
+
+Next, let's update our `<p>` element to display `palindrome`.
+
+```js
+  render() {
+    return (
+      <div>
+        <input></input>
+        <button> Check </button>
+        <p> Palindrome: { this.state.palindrome } </p>
+      </div>
+    )
+  }
+```
+
+Next, let's update our `input` element to handle user input
+
+```js
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  render() {
+    return (
+      <div>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button> Check </button>
+        <p> Palindrome: { this.state.palindrome } </p>
+      </div>
+    )
+  }
+```
+
+Finally, let's update our `button` element to handle setting `palindrome` to `"true"` or `"false"`.
+
+```js
+  isPalindrome(userInput) {
+
+  }
+
+  render() {
+    return (
+      <div>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <p> Palindrome: { this.state.palindrome } </p>
+      </div>
+    )
+  }
+```
+
+How you solve the toy problem is up to you, if you can't figure it out, check out the solutions section.
+
 </details>
 
 ### Solution
