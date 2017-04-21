@@ -1079,7 +1079,7 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
   }
 ```
 
-How you solve the toy problem is up to you, if you can't figure it out, check out the solutions section.
+How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
 
 </details>
 
@@ -1134,3 +1134,17 @@ export default class Palindrome extends Component {
 ```
 
 </details>
+
+## Step 7
+
+### Summary
+
+In this step we are going to build our `Sum` component.
+
+### Instructions
+
+<b>The problem summary:</b> Given two numbers, calculate the sum and display it.
+
+<b>The component outline:</b> Render two `input` elements, one `button` element, and one `<p>` element.
+
+Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`.
