@@ -564,7 +564,7 @@ assignEvenAndOdds(userInput) {
 }
 ```
 
-How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
+How you solve the toy problem is up to you, if you can't figure it out check out the solution section.
 
 </details>
 
@@ -746,7 +746,7 @@ Finally let's update our `button` element to handle filtering our employee array
   }
 ```
 
-How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
+How you solve the toy problem is up to you, if you can't figure it out check out the solution section.
 
 </details>
 
@@ -925,7 +925,7 @@ Finally, let's update our `button` element to handle filtering our names array.
   }
 ```
 
-How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
+How you solve the toy problem is up to you, if you can't figure it out check out the solution section.
 
 </details>
 
@@ -1016,7 +1016,7 @@ Let's begin by rendering our component's outline.
   }
 ```
 
-Now that we hae a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep track of what the user input is and if the user input is a palindrome or not.
+Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep track of what the user input is and if the user input is a palindrome or not.
 
 ```js
   constructor() {
@@ -1079,7 +1079,7 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
   }
 ```
 
-How you solve the toy problem is up to you, if you can't figure it out, check out the solution section.
+How you solve the toy problem is up to you, if you can't figure it out check out the solution section.
 
 </details>
 
@@ -1147,11 +1147,101 @@ In this step we are going to build our `Sum` component.
 
 <b>The component outline:</b> Render two `input` elements, one `button` element, and one `<p>` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`. Have the `button` element call a method on the class that solves the toy problem and updates teh value of `sum`. Assign the `<p>` element the value of `sum`.
+Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`. Have the `button` element call a method on the class that solves the toy problem and updates the value of `sum`. Assign the `<p>` element the value of `sum`.
 
 <details>
 
 <summary> Detailed Instructions </summary>
+
+<br />
+
+Let's begin by rendering our component's outline.
+
+```js
+  render() {
+    return (
+      <div>
+        <input></input>
+        <input></input>
+        <button> Add </button>
+        <p></p>
+      </div>
+    )
+  }
+```
+
+Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep track of two numbers the user gives us and the sum of those two numbers.
+
+```js
+  constructor() {
+    super();
+
+    this.state = {
+      number1: 0,
+      number2: 0,
+      sum: null
+    }
+  }
+```
+
+Next, let's update our `<p>` element to display `sum`.
+
+```js
+  render() {
+    return (
+      <div>
+        <input></input>
+        <input></input>
+        <button> Add </button>
+        <p> Sum: {this.state.sum} </p>
+      </div>
+    )
+  }
+```
+
+Next, let's update our `input` elements to handle user input
+
+```js
+  updateNumber1(val) {
+    this.setState({ number1: parseInt(val, 10) });
+  }
+
+  updateNumber2(val) {
+    this.setState({ number2: parseInt(val, 10) });
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button> Add </button>
+        <p> Sum: {this.state.sum} </p>
+      </div>
+    )
+  }
+```
+
+Finally, let's update our `button` element to update the value of `sum`.
+
+```js
+  add(num1, num2) {
+
+  }
+
+  render() {
+    return (
+      <div>
+        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <p> Sum: {this.state.sum} </p>
+      </div>
+    )
+  }
+```
+
+How you solve the toy problem is up to you, if you can't figure it out check out the solution section.
 
 </details>
 
