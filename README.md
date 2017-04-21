@@ -464,7 +464,7 @@ export default class Sum extends Component {
 
 ### Summary
 
-Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In this step we'll start with the first topic: `EvenAndOdd`.
+Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In the following steps it's important to understand that there is more than one way to solve a toy problem, if your solution doesn't match mine that's okay. In this step we'll start with the first topic: `EvenAndOdd`.
 
 ### Instructions
 
@@ -567,8 +567,6 @@ How you solve the toy problem is up to you, if you can't figure it out, check ou
 </details>
 
 ### Solution
-
-There is more than one way to solve the toy problem. As long as your method separates the numbers into two different arrays correctly you are good. Check out the detailed instructions section for this step for any clarification.
 
 <details>
 
@@ -750,8 +748,6 @@ How you solve the toy problem is up to you, if you can't figure it out, check ou
 
 ### Solution
 
-There is more than one way to solve the toy problem. As long as your method filters the array correctly you are good. Check out the detailed instructions section for this step for any clarification.
-
 <details>
 
 <summary> <code> FilterObject.js </code> </summary>
@@ -822,3 +818,76 @@ export default class FilterObject extends Component {
 <br /> 
 
 <b> Insert giphy here of flow once the app has been styled </b>
+
+## Step 5
+
+### Summary 
+
+In this step we are going to build out our `FilterString` component.
+
+### Instructions
+
+<b>The problem summary:</b> Use a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
+
+<b>The component outline:</b> Render one `<p>` element, one `input` element, one `button` element, and another `<p>` element.
+
+Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFilteredArray`, `userInput`, and `filteredArray`. Have the `input` elment update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredArray`. Assign one `<p>` element the value of `unFilteredArray` and the other `<p>` element the value of `filteredArray`.
+
+<details>
+
+<summary> Detailed Instructions </summary>
+
+</details>
+
+### Solution
+
+<details>
+
+<summary> <code> FilterString.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class FilterString extends Component {
+  
+  constructor() {
+    super();
+
+    this.state = {
+      names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jennifer', 'Mark', 'Maddy'],
+      userInput: '',
+      filteredNames: []
+    };
+  }
+
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  filterNames(userInput) {
+    var names = this.state.names;
+    var filteredNames = [];
+
+    for ( var i = 0; i < names.length; i++ ) {
+      if ( names[i].includes(userInput) ) {
+        filteredNames.push(names[i]);
+      }
+    }
+
+    this.setState({ filteredNames: filteredNames });
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      </div>
+    )
+  }
+}
+```
+
+</details>
