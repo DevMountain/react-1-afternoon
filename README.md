@@ -831,7 +831,7 @@ In this step we are going to build out our `FilterString` component.
 
 ### Instructions
 
-<b>The problem summary:</b> Use a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
+<b>The problem summary:</b> Using a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
 
 <b>The component outline:</b> Render one `<p>` element, one `input` element, one `button` element, and another `<p>` element.
 
@@ -974,6 +974,78 @@ export default class FilterString extends Component {
         <input onChange={ (e) => this.handleChange(e.target.value) }></input>
         <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
         <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      </div>
+    )
+  }
+}
+```
+
+</details>
+
+## Step 6
+
+### Summary
+
+In this step we are going to build our `Palindrome` component.
+
+### Instructions
+
+<b>The problem summary:</b> Using a given string, determine if it is spelt the same backwards as it is forwards. 
+
+<b>The component outline:</b> Render one `input` element, one `button` element, and one `<p>` element.
+
+Let's begin by rendering our component's outline. Then use state to keep track of two properties: `userInput` and `palindrome`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `palindrome` to either the string of `true` or `false`. Assign the `<p>` element the value of `palindrome`.
+
+<details>
+
+<summary> Palindrome.js </summary>
+
+</details>
+
+### Solution
+
+<details>
+
+<summary> <code> Palindrome.js </code> </summary>
+
+```js
+import React, { Component } from 'react';
+
+export default class Palindrome extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      userInput: '',
+      palindrome: ''
+    };
+  }
+
+  handleChange(val) {
+    this.setState({ userInput: val });
+  }
+
+  isPalindrome(userInput) {
+    var forwards = userInput;
+    var backwards = userInput;
+    backwards = backwards.split('');
+    backwards = backwards.reverse();
+    backwards = backwards.join('');
+
+    if ( forwards === backwards ) {
+      this.setState({ palindrome: 'true' });
+    } else {
+      this.setState({ palindrome: 'false' });
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <p> Palindrome: { this.state.palindrome } </p>
       </div>
     )
   }
