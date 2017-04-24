@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import RaisedButton from 'material-ui/RaisedButton'
 
 export default class EvenAndOdd extends Component {
 
@@ -37,7 +36,7 @@ export default class EvenAndOdd extends Component {
     return (
       <div>
         <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <RaisedButton onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </RaisedButton>
+        <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
         <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
         <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
       </div>
