@@ -2,11 +2,10 @@
 
 # Project Summary
 
-In this project we will take a look at a react application created using `create-react-app`. The layout has already been created for us but none of the functionality works. At the end of this project you should have an understanding of the following topics:
+In this project we will create a react application that solves computer science toy problems and showcases them in a feed. The file structure has already been created for us but none of the functionality works. At the end of this project you should have an understanding of the following topics:
 
 * Components
 * State
-* Props
 * Import / Export
 * .gitignore
 * NPM install
@@ -30,7 +29,14 @@ In this step we are going to dive into the functionality of the application. If 
 
 ### Instructions
 
-Import the necssary items from 'react' and create a `TopicBrowser` class that renders a `<p>` element that says "Hello World". Then export `TopicBrowser`, import it in `App.js`, and render `TopicBrowser` in `App.js`. 
+* Open `src/components/TopicBrowser/TopicBrowser.js`.
+* Import `React` and `Component` from `react`.
+* Create a basic react component called `TopicBrowser`:
+  * This component should `render` one `<p>` element that says "Hello World."
+* Export `TopicBrowser` by default.
+* Open `src/App.js`.
+* Import the `TopicBrowser` component after the `import` of react.
+* Render the `TopicBrowser` component in the `render` method of `App`.
 
 <details>
 
