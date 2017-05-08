@@ -44,13 +44,13 @@ In this step we are going to dive into the functionality of the application. If 
 
 <br />
 
-Let's start by importing `React, { Component }` from 'react'. This will allow use to use JSX and create a class that extends on `Component`.
+Let's begin by opening `src/components/TopicBrowser/TopicBrowser.js` and importing `React, { Component }` from `react` at the top of the file. This will allow use to use JSX and create a class that extends on `Component`.
 
 ```js
 import React, { Component } from 'react';
 ```
 
-Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see constructor camel case ( meaning the first letter is also captalized ). Since this component is going to browse our topics, I went with the class name of TopicBrowser. 
+Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see constructor camel case ( meaning the first letter is also captalized ). In React constructor camel case is required for the name of your class. If it is not constructor camel case the component will not mount or render in your application. Since this component is going to browse our topics, I went with the class name of TopicBrowser. 
 
 ```js
 class TopicBrowser extends Component {
@@ -58,7 +58,7 @@ class TopicBrowser extends Component {
 }
 ```
 
-Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}` this is the method that is called to render our JSX onto the DOM. Inside the `render` method we `return` the JSX. 
+Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}`. This is the method that is called to render our JSX onto the DOM. Inside the `render` method we use a `return` statement to `return` the JSX that will be rendered. 
 
 ```js
 class TopicBrowser extends Component {
