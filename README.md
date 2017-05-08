@@ -488,9 +488,27 @@ In this step we'll start with the first topic: `EvenAndOdd`.
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. 
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and two `span` elements. 
 
-Let's begin by rendering our component's outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+* Open `src/components/Topics/EvenAndOdd.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox evenAndOddPB"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * Both `span`s - className="resultsBox"
+* Assign the `h4` element the value of `Evens and Odds`.
+* Create a `constructor` method that creates an initial state:
+  * `evenArray` - This should default to an empty array.
+  * `oddArray` - This should default to an empty array.
+  * `userInput` - This should default to an empty string.
+* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `evenArray` and `oddArray` on state.
+* Assign one `span` element to display the value of `evenArray`.
+* Assign the other `span` element to display the value of `oddArray`.
 
 <details>
 
@@ -502,10 +520,13 @@ Let's begin by rendering our component's outline.
 
 ```js
 render() {
-  <input></input>
-  <button> Split </button>
-  <p></p>
-  <p></p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine"></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"></span>
+    <span className="resultsBox"></span>
+  </div>
 }
 ```
 
@@ -523,14 +544,17 @@ constructor() {
 }
 ```
 
-Next, let's update our last two `<p>` elements to display our `evenArray` and `oddArray`.
+Next, let's update our last two `span` elements to display our `evenArray` and `oddArray`.
 
 ```js
 render() {
-  <input></input>
-  <button> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine"></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -540,10 +564,13 @@ Next let's update our `input` element to handle user input. In React you can use
 
 ```js
 render() {
-  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-  <button> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -565,10 +592,13 @@ Now that our `input` functionality is finished, all that's left is getting our `
 
 ```js
 render() {
-  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-  <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -605,8 +635,8 @@ export default class EvenAndOdd extends Component {
     }
   }
 
-  handleChange(e) {
-    this.setState({ userInput: e.target.value });
+  handleChange(val) {
+    this.setState({ userInput: val });
   }
 
   assignEvenAndOdds(userInput) {
@@ -627,11 +657,12 @@ export default class EvenAndOdd extends Component {
 
   render() {
     return (
-      <div>
-        <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
-        <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
-        <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-        <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+      <div className="puzzleBox evenAndOddPB">
+        <h4> Evens and Odds </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+        <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+        <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
       </div>
     )
   }
