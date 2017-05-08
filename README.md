@@ -673,7 +673,7 @@ export default class EvenAndOdd extends Component {
 
 <br /> 
 
-<b> Insert giphy here of flow once the app has been styled </b>
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1g.gif" />
 
 ## Step 4 
 
