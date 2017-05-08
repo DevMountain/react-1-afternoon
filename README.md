@@ -904,10 +904,11 @@ In this step we are going to build out our `FilterString` component.
 
 <b>The problem summary:</b> Using a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
 
-<b>The component outline:</b> Render one `<p>` element, one `input` element, one `button` element, and another `<p>` element.
+<b>The component outline:</b> One paren `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
 
 * Open `src/components/Topics/FilterString.js`.
 * Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
   * `div` - className="puzzleBox filterStringPB"
   * The first `span` - className="puzzleText"
@@ -915,7 +916,7 @@ In this step we are going to build out our `FilterString` component.
   * `button` - className="confirmationButton"
   * The last `span` - className="resultsBox filterStringRB"
 * Assign the `h4` element the value of `"Filter String`.
-* Create a `constructor` method that creates an `initial state`:
+* Create a `constructor` method that creates an initial state:
   * `unFilteredArray` - This should default to an array of strings. You choose what strings go in the array.
   * `userInput` - This should default to an empty string.
   * `filteredArray` - This should default to an empty array.
@@ -1088,9 +1089,24 @@ In this step we are going to build our `Palindrome` component.
 
 <b>The problem summary:</b> Using a given string, determine if it is spelt the same backwards as it is forwards. 
 
-<b>The component outline:</b> Render one `input` element, one `button` element, and one `<p>` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of two properties: `userInput` and `palindrome`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `palindrome` to either the string of `true` or `false`. Assign the `<p>` element the value of `palindrome`.
+* Open `src/components/Topics/Palindrome.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox filterStringPB"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * `span` - className="resultsBox"
+* Assign the `h4` element the value of `"Palindrome"
+* Create a `constructor` method that creates an initial state:
+  * `userInput` - This should default to an empty string.
+  * `palindrome` - This should default to an empty string.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `palindrome`.
+* Assign the `span` element the value of `palindrome`.
 
 <details>
 
@@ -1103,10 +1119,11 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <button> Check </button>
-        <p></p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"></span>
       </div>
     )
   }
@@ -1125,15 +1142,16 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next, let's update our `<p>` element to display `palindrome`.
+Next, let's update our `span` element to display `palindrome`.
 
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <button> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1148,10 +1166,11 @@ Next, let's update our `input` element to handle user input
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1166,10 +1185,11 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1219,10 +1239,11 @@ export default class Palindrome extends Component {
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1230,6 +1251,8 @@ export default class Palindrome extends Component {
 ```
 
 </details>
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/4g.gif" />
 
 ## Step 7
 
