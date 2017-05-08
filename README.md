@@ -188,11 +188,16 @@ export default class TopicBrowser extends Component {
 
 Now that our `TopicBrowser` component is created and we know everything has been exported and imported correctly, let's remove the `<p>` element and start focusing on the functionality of the `TopicBrowser` component.
 
-In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import those topic components into our `TopicBrowser` component.
+In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import and render those topic components into our `TopicBrowser` component.
 
 ### Instructions
 
-Create a basic outline for each topic component file inside of `src/Topics` and have them render a `<p>` element saying the name of the component. Then import each topic into `TopicBrowser` and render them one after another.
+* Create a basic outline for each topic component ( the same exact way we did the `TopicBrowser` component ):
+  * Make sure the name of the class is the same name as the file. 
+  * Have the component render a `<p>` element saying the name of the component.
+* Open `src/components/TopicBrowser/TopicBrowser.js`.
+* Import all the topic files from `src/components/Topics` into `src/components/App.js`.
+* Render a parent `div` element containing all of the Topic components.
 
 <details>
 
