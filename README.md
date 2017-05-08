@@ -679,15 +679,34 @@ export default class EvenAndOdd extends Component {
 
 ### Summary
 
-In this step we are going to do the same thing but now with our component `FilterObject`. 
+In this step we are going to do the same thing but with our component `FilterObject`. 
 
 ### Instructions
 
 <b>The problem summary:</b> Using a pre-determined array of objects, filter out objects that do not have a given property. Display a new array populated with the objects that do have the given property.
 
-<b>The component outline</b>: Render one `input` element, one `button` element, and two `<p>` elements.
+<b>The component outline</b>: One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFiltertedArray`, `userInput`, and `filteredArray`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredArray`. Assign one `<p>` element the value of `unFilteredArray` and the other `<p>` element the value of `filteredArray`.
+* Open `src/components/Topics/FilterObject.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox filterObjectPB"
+  * The first `span` - className="puzzleText"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * `span` - className="resultsBox filterObjectRB"
+* Assign the `h4` element the value of `Filter Object`.
+* Create a `constructor` method that creates an initial state:
+  * `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
+  * `userInput` - This should default to an empty string.
+  * `filteredArray` - This should default to an empty array.
+* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `filteredArray`.
+* Assign the first `span` element the value of `unFilteredArray`.
+* Assign the other `span` element the value of `filteredArray`.
 
 <details>
 
