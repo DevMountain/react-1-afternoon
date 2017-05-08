@@ -11,8 +11,6 @@ In this project we will take a look at a react application created using `create
 * .gitignore
 * NPM install
 
-After completing this project you'll have the knowledge to add more toy problems as you complete them throughout your time at DevMountain. You can also expand from toy problems if you like by adding tricks you learn during DevMountain.
-
 ## Setup
 
 All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. You can choose to keep your development server running throughout the project or just remember to run `npm start` at the solution stage of each step.
@@ -1292,5 +1290,21 @@ export default class Sum extends Component {
 ```
 
 </details>
+
+## Black Diamond
+
+To take this project a step further try to add more toy problems to the project throughout your time at DevMountain. This is completely optional, however this project has the potential to be a `showcase` of your knowledge to solve CS problems.
+
+## Contributions
+
+If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
+
+## Copyright
+
+© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
+
+<p align="center">
+<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
+</p>
 
 
