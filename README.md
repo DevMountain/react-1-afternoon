@@ -1252,6 +1252,8 @@ export default class Palindrome extends Component {
 
 </details>
 
+<br />
+
 <img src="https://github.com/DevMountain/showcase/blob/solution/readme/4g.gif" />
 
 ## Step 7
