@@ -11,7 +11,7 @@ In this project we will take a look at a react application created using `create
 * .gitignore
 * NPM install
 
-You can find a live finished example <a href="https://devmountain.github.io/showcase/">here.</a>
+You can find a live finished example <a href="https://devmountain.github.io/showcase/" target="_blank">here.</a>
 
 ## Setup
 
