@@ -719,11 +719,12 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <p></p>
-        <input></input>
-        <button> Filter </button>
-        <p></p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"></span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"></span>
       </div>
     )
   }
@@ -764,11 +765,12 @@ Next let's update our `<p>` elements to display our unfiltered and filtered arra
 ```js
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input></input>
-        <button> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -783,11 +785,12 @@ Next let's update our `input` element to handle user input.
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -802,11 +805,12 @@ Finally let's update our `button` element to handle filtering our employee array
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -872,11 +876,12 @@ export default class FilterObject extends Component {
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -887,7 +892,7 @@ export default class FilterObject extends Component {
 
 <br /> 
 
-<b> Insert giphy here of flow once the app has been styled </b>
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2g.gif" />
 
 ## Step 5
 
