@@ -31,11 +31,12 @@ export default class FilterString extends Component {
 
   render() {
     return (
-      <div>
-        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
-        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <p className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </p>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
     )
   }

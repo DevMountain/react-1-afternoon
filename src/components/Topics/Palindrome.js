@@ -31,10 +31,11 @@ export default class Palindrome extends Component {
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }

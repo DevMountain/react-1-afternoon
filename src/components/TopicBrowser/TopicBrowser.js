@@ -10,7 +10,7 @@ import Sum from '../Topics/Sum'
 export default class TopicBrowser extends Component {
   render() {
     return (
-      <div>
+      <div className="puzzleFeed">
         <EvenAndOdd />
         <FilterObject />
         <FilterString />

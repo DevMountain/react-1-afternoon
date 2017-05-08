@@ -2,4 +2,129 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Container Elements */
+.puzzleFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.puzzleBox {
+  width: 405px;
+  border-radius: 2px;
+  padding: 0px 20px;
+  background-color: #424242;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0px;
+  margin-right: 0px;
+}
+
+.evenAndOddPB {
+  height: 270px;
+}
+
+.filterObjectPB {
+  height: 390px
+}
+
+.filterStringPB {
+  height: 350px;
+}
+
+.palindromePB {
+  height: 225px;
+}
+
+.sumPB {
+  height: 270px;
+}
+
+ .resultsBox {
+  width: 360px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #303030;
+  margin-top: 10px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.filterObjectRB {
+  height: 95px;
+}
+
+.filterStringRB {
+  height: 60px;
+}
+
+.inputLine {
+  width: 300px;
+  height: 15px;
+  font-size: 20px;
+  color: #fff;
+  padding-bottom: 6px;
+  border: none;
+  border-bottom: solid 1px #3fbaf9;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+
+/* Buttons */
+
+.confirmationButton {
+  width: 380px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #4fc3f7;
+  border: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.confirmationButton:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+}
+
+/* Text */
+h4 {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.puzzleText {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.54;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+

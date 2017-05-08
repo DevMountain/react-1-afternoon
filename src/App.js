@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 
 class App extends Component {
