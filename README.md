@@ -2,18 +2,24 @@
 
 # Project Summary
 
-In this project we will take a look at a react application created using `create-react-app`. The layout has already been created for us but none of the functionality works. At the end of this project you should have an understanding of the following topics:
+In this project we will create a react application that solves computer science toy problems and showcases them in a feed. The file structure has already been created for us but none of the functionality works. At the end of this project you should have an understanding of the following topics:
 
 * Components
 * State
-* Props
 * Import / Export
 * .gitignore
 * NPM install
 
+You can find a live finished example <a href="https://devmountain.github.io/showcase/">here.</a>
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1-2.png" />
+
 ## Setup
 
-All we need to do in order to get started is run `npm install` in the root directory of the project. After `npm install` is completed you can test to see if the project is ready to go by running `npm start`. You should see in your terminal 2 warnings, however no errors. You can choose to keep your development server running throughout the project or just remember to run `npm start` at the solution stage of each step.
+* `Fork` and `clone` this repository.
+* `cd` into the project directory.
+* Run `npm install`.
+* After `npm install` has finished run `npm start`.
 
 ## Step 1
 
@@ -23,7 +29,14 @@ In this step we are going to dive into the functionality of the application. If 
 
 ### Instructions
 
-Import the necssary items from 'react' and create a `TopicBrowser` class that renders a `<p>` element that says "Hello World". Then export `TopicBrowser`, import it in `App.js`, and render `TopicBrowser` in `App.js`. 
+* Open `src/components/TopicBrowser/TopicBrowser.js`.
+* Import `React` and `Component` from `react`.
+* Create a basic react component called `TopicBrowser`:
+  * This component should `render` one `<p>` element that says "Hello World."
+* Export `TopicBrowser` by default.
+* Open `src/App.js`.
+* Import the `TopicBrowser` component after the `import` of react.
+* Render the `TopicBrowser` component in the `render` method of `App`.
 
 <details>
 
@@ -31,13 +44,13 @@ Import the necssary items from 'react' and create a `TopicBrowser` class that re
 
 <br />
 
-Let's start by importing `React, { Component }` from 'react'. This will allow use to use JSX and create a class that extends on `Component`.
+Let's begin by opening `src/components/TopicBrowser/TopicBrowser.js` and importing `React, { Component }` from `react` at the top of the file. This will allow use to use JSX and create a class that extends on `Component`.
 
 ```js
 import React, { Component } from 'react';
 ```
 
-Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see constructor camel case ( meaning the first letter is also captalized ). Since this component is going to browse our topics, I went with the class name of TopicBrowser. 
+Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see constructor camel case ( meaning the first letter is also captalized ). In React constructor camel case is required for the name of your class. If it is not constructor camel case the component will not mount or render in your application. Since this component is going to browse our topics, I went with the class name of TopicBrowser. 
 
 ```js
 class TopicBrowser extends Component {
@@ -45,7 +58,7 @@ class TopicBrowser extends Component {
 }
 ```
 
-Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}` this is the method that is called to render our JSX onto the DOM. Inside the `render` method we `return` the JSX. 
+Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}`. This is the method that is called to render our JSX onto the DOM. Inside the `render` method we use a `return` statement to `return` the JSX that will be rendered. 
 
 ```js
 class TopicBrowser extends Component {
@@ -99,13 +112,13 @@ export default class TopicBrowser extends Component {
 
 <br />
 
-Both ways are completely fine, however I'll be using the same line `export`. Now that our `export` is setup we can `import` it in `App.js` and `render` it. We can `import` components with the following format: `import ComponentNameHere from '/file_path_to_component_here'`. Therefore our `import` in `App.js` would look like:
+Both ways are completely fine, however I'll be using the same line `export`. Now that our `export` is setup we can `import` it in `App.js` and `render` it. We can `import` components with the following format: `import ComponentNameHere from '/file_path_to_component_here'`. Therefore our `import` in `src/components/App.js` would look like:
 
 ```js
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 ```
 
-The `import` is clever enough to add on the `.js` extension for us. Now that `App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `App.js` should now look like: 
+The `import` is clever enough to add on the `.js` extension for us. Now that `src/components/App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `src/components/App.js` should now look like: 
 
 ```js
 import React, { Component } from 'react';
@@ -167,7 +180,7 @@ export default class TopicBrowser extends Component {
 
 </details>
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1-1.png" />
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2-2.png" />
 
 ## Step 2
 
@@ -175,11 +188,16 @@ export default class TopicBrowser extends Component {
 
 Now that our `TopicBrowser` component is created and we know everything has been exported and imported correctly, let's remove the `<p>` element and start focusing on the functionality of the `TopicBrowser` component.
 
-In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import those topic components into our `TopicBrowser` component.
+In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import and render those topic components into our `TopicBrowser` component.
 
 ### Instructions
 
-Create a basic outline for each topic component file inside of `src/Topics` and have them render a `<p>` element saying the name of the component. Then import each topic into `TopicBrowser` and render them one after another.
+* Create a basic outline for each topic component ( the same exact way we did the `TopicBrowser` component ):
+  * Make sure the name of the class is the same name as the file. 
+  * Have the component render a `<p>` element saying the name of the component.
+* Open `src/components/TopicBrowser/TopicBrowser.js`.
+* Import all the topic files from `src/components/Topics` into `src/components/App.js`.
+* Render a parent `div` element containing all of the Topic components.
 
 <details>
 
@@ -456,7 +474,7 @@ export default class Sum extends Component {
 
 </details>
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2-1.png" />
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/3.png" />
 
 ## Step 3
 
@@ -470,9 +488,27 @@ In this step we'll start with the first topic: `EvenAndOdd`.
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component outline:</b> Render one `input` element, one `button` element, and two `<p>` elements. 
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and two `span` elements. 
 
-Let's begin by rendering our component's outline. Then use `state` to keep track of three properties: `evenArray`, `oddArray`, and `userInput`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the values of `evenArray` and `oddArray`. Assign one `<p>` element to display the value of `evenArray` and assign the other `<p>` element to display the value of the `oddArray`. 
+* Open `src/components/Topics/EvenAndOdd.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox evenAndOddPB"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * Both `span`s - className="resultsBox"
+* Assign the `h4` element the value of `"Evens and Odds"`.
+* Create a `constructor` method that creates an initial state:
+  * `evenArray` - This should default to an empty array.
+  * `oddArray` - This should default to an empty array.
+  * `userInput` - This should default to an empty string.
+* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `evenArray` and `oddArray` on state.
+* Assign one `span` element to display the value of `evenArray`.
+* Assign the other `span` element to display the value of `oddArray`.
 
 <details>
 
@@ -484,10 +520,13 @@ Let's begin by rendering our component's outline.
 
 ```js
 render() {
-  <input></input>
-  <button> Split </button>
-  <p></p>
-  <p></p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine"></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"></span>
+    <span className="resultsBox"></span>
+  </div>
 }
 ```
 
@@ -505,14 +544,17 @@ constructor() {
 }
 ```
 
-Next, let's update our last two `<p>` elements to display our `evenArray` and `oddArray`.
+Next, let's update our last two `span` elements to display our `evenArray` and `oddArray`.
 
 ```js
 render() {
-  <input></input>
-  <button> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine"></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -522,10 +564,13 @@ Next let's update our `input` element to handle user input. In React you can use
 
 ```js
 render() {
-  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-  <button> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <button className="confirmationButton"> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -547,10 +592,13 @@ Now that our `input` functionality is finished, all that's left is getting our `
 
 ```js
 render() {
-  <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-  <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
-  <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-  <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+  <div className="puzzleBox evenAndOddPB">
+    <h4> Evens and Odds </h4>
+    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+    <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+    <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
+  </div>
 }
 ```
 
@@ -587,8 +635,8 @@ export default class EvenAndOdd extends Component {
     }
   }
 
-  handleChange(e) {
-    this.setState({ userInput: e.target.value });
+  handleChange(val) {
+    this.setState({ userInput: val });
   }
 
   assignEvenAndOdds(userInput) {
@@ -609,11 +657,12 @@ export default class EvenAndOdd extends Component {
 
   render() {
     return (
-      <div>
-        <input value={this.state.userInput} onChange={ (e) => this.handleChange(e) }></input>
-        <button onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
-        <p> Evens: { JSON.stringify(this.state.evenArray) } </p>
-        <p> Odds: { JSON.stringify(this.state.oddArray) } </p>
+      <div className="puzzleBox evenAndOddPB">
+        <h4> Evens and Odds </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
+        <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
+        <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
       </div>
     )
   }
@@ -624,21 +673,40 @@ export default class EvenAndOdd extends Component {
 
 <br /> 
 
-<b> Insert giphy here of flow once the app has been styled </b>
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1g.gif" />
 
 ## Step 4 
 
 ### Summary
 
-In this step we are going to do the same thing but now with our component `FilterObject`. 
+In this step we are going to do the same thing but with our component `FilterObject`. 
 
 ### Instructions
 
 <b>The problem summary:</b> Using a pre-determined array of objects, filter out objects that do not have a given property. Display a new array populated with the objects that do have the given property.
 
-<b>The component outline</b>: Render one `input` element, one `button` element, and two `<p>` elements.
+<b>The component outline</b>: One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFiltertedArray`, `userInput`, and `filteredArray`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredArray`. Assign one `<p>` element the value of `unFilteredArray` and the other `<p>` element the value of `filteredArray`.
+* Open `src/components/Topics/FilterObject.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox filterObjectPB"
+  * The first `span` - className="puzzleText"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * The last `span` - className="resultsBox filterObjectRB"
+* Assign the `h4` element the value of `"Filter Object"`.
+* Create a `constructor` method that creates an initial state:
+  * `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
+  * `userInput` - This should default to an empty string.
+  * `filteredArray` - This should default to an empty array.
+* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `filteredArray`.
+* Assign the first `span` element the value of `unFilteredArray`.
+* Assign the last `span` element the value of `filteredArray`.
 
 <details>
 
@@ -651,11 +719,12 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <p></p>
-        <input></input>
-        <button> Filter </button>
-        <p></p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"></span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"></span>
       </div>
     )
   }
@@ -691,16 +760,17 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next let's update our `<p>` elements to display our unfiltered and filtered array of employees.
+Next let's update our `span` elements to display our unfiltered and filtered array of employees.
 
 ```js
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input></input>
-        <button> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -715,11 +785,12 @@ Next let's update our `input` element to handle user input.
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -734,11 +805,12 @@ Finally let's update our `button` element to handle filtering our employee array
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -804,11 +876,12 @@ export default class FilterObject extends Component {
 
   render() {
     return (
-      <div>
-        <p> Original: { JSON.stringify(this.state.employees, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
-        <p> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </p>
+      <div className="puzzleBox filterObjectPB">
+        <h4> Filter Object </h4>
+        <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
     )
   }
@@ -819,7 +892,7 @@ export default class FilterObject extends Component {
 
 <br /> 
 
-<b> Insert giphy here of flow once the app has been styled </b>
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2g.gif" />
 
 ## Step 5
 
@@ -831,9 +904,28 @@ In this step we are going to build out our `FilterString` component.
 
 <b>The problem summary:</b> Using a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
 
-<b>The component outline:</b> Render one `<p>` element, one `input` element, one `button` element, and another `<p>` element.
+<b>The component outline:</b> One paren `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `unFilteredArray`, `userInput`, and `filteredArray`. Have the `input` elment update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `filteredArray`. Assign one `<p>` element the value of `unFilteredArray` and the other `<p>` element the value of `filteredArray`.
+* Open `src/components/Topics/FilterString.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox filterStringPB"
+  * The first `span` - className="puzzleText"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * The last `span` - className="resultsBox filterStringRB"
+* Assign the `h4` element the value of `"Filter String`.
+* Create a `constructor` method that creates an initial state:
+  * `unFilteredArray` - This should default to an array of strings. You choose what strings go in the array.
+  * `userInput` - This should default to an empty string.
+  * `filteredArray` - This should default to an empty array.
+* Create an `onChange` prop for the `input` element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `filteredArray`.
+* Assign the first `span` element the value of `unFilteredArray`.
+* Assign the last `span` element the value of `filteredArray`.
 
 <details>
 
@@ -846,11 +938,12 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <p></p>
-        <input></input>
-        <button> Filter </button>
-        <p></p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <span className="puzzleText"></span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterStringRB"></span>
       </div>
     )
   }
@@ -870,16 +963,17 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next, let's update our `<p>` elements to display our unfiltered and filtered array of names.
+Next, let's update our `span` elements to display our unfiltered and filtered array of names.
 
 ```js
   render() {
     return (
-      <div>
-        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
-        <input></input>
-        <button> Filter </button>
-        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
     )
   }
@@ -894,11 +988,12 @@ Next, let's update our `input` element to handle user input.
 
   render() {
     return (
-      <div>
-        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button> Filter </button>
-        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton"> Filter </button>
+        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
     )
   }
@@ -913,11 +1008,12 @@ Finally, let's update our `button` element to handle filtering our names array.
 
   render() {
     return (
-      <div>
-        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
-        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
     )
   }
@@ -967,11 +1063,12 @@ export default class FilterString extends Component {
 
   render() {
     return (
-      <div>
-        <p> Names: { JSON.stringify(this.state.names, null, 10) } </p>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
-        <p> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </p>
+      <div className="puzzleBox filterStringPB">
+        <h4> Filter String </h4>
+        <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+        <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
     )
   }
@@ -979,6 +1076,10 @@ export default class FilterString extends Component {
 ```
 
 </details>
+
+<br />
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/3g.gif" />
 
 ## Step 6
 
@@ -990,9 +1091,25 @@ In this step we are going to build our `Palindrome` component.
 
 <b>The problem summary:</b> Using a given string, determine if it is spelt the same backwards as it is forwards. 
 
-<b>The component outline:</b> Render one `input` element, one `button` element, and one `<p>` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of two properties: `userInput` and `palindrome`. Have the `input` element update the value of `userInput` while the user types. Have the `button` element call a method on the class that solves the toy problem and updates the value of `palindrome` to either the string of `true` or `false`. Assign the `<p>` element the value of `palindrome`.
+* Open `src/components/Topics/Palindrome.js`.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox filterStringPB"
+  * `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * `span` - className="resultsBox"
+* Assign the `h4` element the value of `"Palindrome"`.
+* Create a `constructor` method that creates an initial state:
+  * `userInput` - This should default to an empty string.
+  * `palindrome` - This should default to an empty string.
+* Create an `onChange` prop for the input element that updates the value of `userInput` on state.
+* Create an `onClick` prop for the `button` element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `palindrome`.
+* Assign the `span` element the value of `palindrome`.
 
 <details>
 
@@ -1005,10 +1122,11 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <button> Check </button>
-        <p></p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"></span>
       </div>
     )
   }
@@ -1027,15 +1145,16 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next, let's update our `<p>` element to display `palindrome`.
+Next, let's update our `span` element to display `palindrome`.
 
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <button> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine"></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1050,10 +1169,11 @@ Next, let's update our `input` element to handle user input
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton"> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1068,10 +1188,11 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1121,10 +1242,11 @@ export default class Palindrome extends Component {
 
   render() {
     return (
-      <div>
-        <input onChange={ (e) => this.handleChange(e.target.value) }></input>
-        <button onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
-        <p> Palindrome: { this.state.palindrome } </p>
+      <div className="puzzleBox palindromePB">
+        <h4> Palindrome </h4>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
+        <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
     )
   }
@@ -1132,6 +1254,10 @@ export default class Palindrome extends Component {
 ```
 
 </details>
+
+<br />
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/4g.gif" />
 
 ## Step 7
 
@@ -1143,9 +1269,27 @@ In this step we are going to build our `Sum` component.
 
 <b>The problem summary:</b> Given two numbers, calculate the sum and display it.
 
-<b>The component outline:</b> Render two `input` elements, one `button` element, and one `<p>` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, two `input` elements, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`. Have the `button` element call a method on the class that solves the toy problem and updates the value of `sum`. Assign the `<p>` element the value of `sum`.
+* Open src/components/Topics/Sum.js.
+* Remove the `<p>` element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox sumPB"
+  * The two `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * `span` - className="resultsBox"
+* Assign the `h4` element the `value` of `"Sum"`.
+* Create a `constructor` method that creates an initital state:
+  * `number1` - This should default to `0`.
+  * `number2` - This should default to `0`.
+  * `sum` - This should default to `null`.
+* Create an `onChange` prop for the first `input` element that updates the value of `number1` on state.
+* Create an `onChange` prop for the second `input` element that updates the value of `number2` on state.
+* Create an `onClick` prop for the button element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `sum`.
+* Assign the `span` element the value of `sum`.
 
 <details>
 
@@ -1158,11 +1302,12 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <input></input>
-        <button> Add </button>
-        <p></p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"></span>
       </div>
     )
   }
@@ -1182,16 +1327,17 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next, let's update our `<p>` element to display `sum`.
+Next, let's update our `span` element to display `sum`.
 
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <input></input>
-        <button> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1210,11 +1356,12 @@ Next, let's update our `input` elements to handle user input
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1229,11 +1376,12 @@ Finally, let's update our `button` element to update the value of `sum`.
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1278,11 +1426,12 @@ export default class Sum extends Component {
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1290,6 +1439,10 @@ export default class Sum extends Component {
 ```
 
 </details>
+
+<br />
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/5g.gif" />
 
 ## Black Diamond
 
