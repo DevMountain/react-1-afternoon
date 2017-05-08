@@ -695,7 +695,7 @@ In this step we are going to do the same thing but with our component `FilterObj
   * The first `span` - className="puzzleText"
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
-  * `span` - className="resultsBox filterObjectRB"
+  * The last `span` - className="resultsBox filterObjectRB"
 * Assign the `h4` element the value of `Filter Object`.
 * Create a `constructor` method that creates an initial state:
   * `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
@@ -706,7 +706,7 @@ In this step we are going to do the same thing but with our component `FilterObj
   * This method should solve the toy problem.
   * This method should update the value of `filteredArray`.
 * Assign the first `span` element the value of `unFilteredArray`.
-* Assign the other `span` element the value of `filteredArray`.
+* Assign the last `span` element the value of `filteredArray`.
 
 <details>
 
