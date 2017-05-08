@@ -498,7 +498,7 @@ In this step we'll start with the first topic: `EvenAndOdd`.
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * Both `span`s - className="resultsBox"
-* Assign the `h4` element the value of `Evens and Odds`.
+* Assign the `h4` element the value of `"Evens and Odds"`.
 * Create a `constructor` method that creates an initial state:
   * `evenArray` - This should default to an empty array.
   * `oddArray` - This should default to an empty array.
@@ -696,7 +696,7 @@ In this step we are going to do the same thing but with our component `FilterObj
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * The last `span` - className="resultsBox filterObjectRB"
-* Assign the `h4` element the value of `Filter Object`.
+* Assign the `h4` element the value of `"Filter Object"`.
 * Create a `constructor` method that creates an initial state:
   * `unFilteredArray` - This should default to an array of objects. Try to pick an array of objects that share similiar propteries but they should not be indentical objects.
   * `userInput` - This should default to an empty string.
