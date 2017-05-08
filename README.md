@@ -1272,7 +1272,7 @@ In this step we are going to build our `Sum` component.
 <b>The component outline:</b> One parent `div` element, one `h4` element, two `input` elements, one `button` element, and one `span` element.
 
 * Open src/components/Topics/Sum.js.
-* Remove the <p> element from the `return` of the `render` method.
+* Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
   * `div` - className="puzzleBox sumPB"
