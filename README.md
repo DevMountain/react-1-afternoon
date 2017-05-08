@@ -1077,6 +1077,8 @@ export default class FilterString extends Component {
 
 </details>
 
+<br />
+
 <img src="https://github.com/DevMountain/showcase/blob/solution/readme/3g.gif" />
 
 ## Step 6
@@ -1099,10 +1101,11 @@ In this step we are going to build our `Palindrome` component.
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * `span` - className="resultsBox"
-* Assign the `h4` element the value of `"Palindrome"
+* Assign the `h4` element the value of `"Palindrome"`.
 * Create a `constructor` method that creates an initial state:
   * `userInput` - This should default to an empty string.
   * `palindrome` - This should default to an empty string.
+* Create an `onChange` prop for the input element that updates the value of `userInput` on state.
 * Create an `onClick` prop for the `button` element that calls a method on the class:
   * This method should solve the toy problem.
   * This method should update the value of `palindrome`.
@@ -1266,9 +1269,27 @@ In this step we are going to build our `Sum` component.
 
 <b>The problem summary:</b> Given two numbers, calculate the sum and display it.
 
-<b>The component outline:</b> Render two `input` elements, one `button` element, and one `<p>` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, two `input` elements, one `button` element, and one `span` element.
 
-Let's begin by rendering our component's outline. Then use state to keep track of three properties: `number1`, `number2`, and `sum`. Have the `input` elements update the values of `number1` and `number2`. Have the `button` element call a method on the class that solves the toy problem and updates the value of `sum`. Assign the `<p>` element the value of `sum`.
+* Open src/components/Topics/Sum.js.
+* Remove the <p> element from the `return` of the `render` method.
+* Add the component outline to the `return` of the `render` method.
+* Add the following `className` props to the outline:
+  * `div` - className="puzzleBox sumPB"
+  * The two `input` - className="inputLine"
+  * `button` - className="confirmationButton"
+  * `span` - className="resultsBox"
+* Assign the `h4` element the `value` of `"Sum"`.
+* Create a `constructor` method that creates an initital state:
+  * `number1` - This should default to `0`.
+  * `number2` - This should default to `0`.
+  * `sum` - This should default to `null`.
+* Create an `onChange` prop for the first `input` element that updates the value of `number1` on state.
+* Create an `onChange` prop for the second `input` element that updates the value of `number2` on state.
+* Create an `onClick` prop for the button element that calls a method on the class:
+  * This method should solve the toy problem.
+  * This method should update the value of `sum`.
+* Assign the `span` element the value of `sum`.
 
 <details>
 
@@ -1281,11 +1302,12 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <input></input>
-        <button> Add </button>
-        <p></p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"></span>
       </div>
     )
   }
@@ -1305,16 +1327,17 @@ Now that we have a rough draft of everything our component will need, let's star
   }
 ```
 
-Next, let's update our `<p>` element to display `sum`.
+Next, let's update our `span` element to display `sum`.
 
 ```js
   render() {
     return (
-      <div>
-        <input></input>
-        <input></input>
-        <button> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1333,11 +1356,12 @@ Next, let's update our `input` elements to handle user input
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton"> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1352,11 +1376,12 @@ Finally, let's update our `button` element to update the value of `sum`.
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1401,11 +1426,12 @@ export default class Sum extends Component {
 
   render() {
     return (
-      <div>
-        <input type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
-        <button onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
-        <p> Sum: {this.state.sum} </p>
+      <div className="puzzleBox sumPB">
+        <h4> Sum </h4>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
+        <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
     )
   }
@@ -1413,6 +1439,10 @@ export default class Sum extends Component {
 ```
 
 </details>
+
+<br />
+
+<img src="https://github.com/DevMountain/showcase/blob/solution/readme/5g.gif" />
 
 ## Black Diamond
 
