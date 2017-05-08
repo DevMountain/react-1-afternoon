@@ -112,13 +112,13 @@ export default class TopicBrowser extends Component {
 
 <br />
 
-Both ways are completely fine, however I'll be using the same line `export`. Now that our `export` is setup we can `import` it in `App.js` and `render` it. We can `import` components with the following format: `import ComponentNameHere from '/file_path_to_component_here'`. Therefore our `import` in `App.js` would look like:
+Both ways are completely fine, however I'll be using the same line `export`. Now that our `export` is setup we can `import` it in `App.js` and `render` it. We can `import` components with the following format: `import ComponentNameHere from '/file_path_to_component_here'`. Therefore our `import` in `src/components/App.js` would look like:
 
 ```js
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 ```
 
-The `import` is clever enough to add on the `.js` extension for us. Now that `App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `App.js` should now look like: 
+The `import` is clever enough to add on the `.js` extension for us. Now that `src/components/App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `src/components/App.js` should now look like: 
 
 ```js
 import React, { Component } from 'react';
