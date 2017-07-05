@@ -122,7 +122,7 @@ The `import` is clever enough to add on the `.js` extension for us. Now that `sr
 
 ```js
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 
 class App extends Component {
@@ -146,7 +146,7 @@ export default App;
 
 ```js
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 
 class App extends Component {
