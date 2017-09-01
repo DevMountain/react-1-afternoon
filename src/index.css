@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
   background-color: #303030;
   display: flex;
@@ -128,4 +129,3 @@ h4 {
   color: #ffffff;
   margin-bottom: 35px;
 }
-
