@@ -10,9 +10,9 @@ In this project we will create a react application that solves computer science 
 * .gitignore
 * NPM install
 
-You can find a live finished example <a href="https://devmountain.github.io/showcase/">here.</a>
+You can find a live finished example <a href="https://devmountain.github.io/react-1-afternoon/">here.</a>
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1-2.png" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/1-2.png" />
 
 ## Setup
 
@@ -180,7 +180,7 @@ export default class TopicBrowser extends Component {
 
 </details>
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2-2.png" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/2-2.png" />
 
 ## Step 2
 
@@ -474,7 +474,7 @@ export default class Sum extends Component {
 
 </details>
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/3.png" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/3.png" />
 
 ## Step 3
 
@@ -673,7 +673,7 @@ export default class EvenAndOdd extends Component {
 
 <br /> 
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/1g.gif" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/1g.gif" />
 
 ## Step 4 
 
@@ -892,7 +892,7 @@ export default class FilterObject extends Component {
 
 <br /> 
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/2g.gif" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/2g.gif" />
 
 ## Step 5
 
@@ -1079,7 +1079,7 @@ export default class FilterString extends Component {
 
 <br />
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/3g.gif" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/3g.gif" />
 
 ## Step 6
 
@@ -1257,7 +1257,7 @@ export default class Palindrome extends Component {
 
 <br />
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/4g.gif" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/4g.gif" />
 
 ## Step 7
 
@@ -1442,7 +1442,7 @@ export default class Sum extends Component {
 
 <br />
 
-<img src="https://github.com/DevMountain/showcase/blob/solution/readme/5g.gif" />
+<img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/5g.gif" />
 
 ## Black Diamond
 
