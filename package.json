@@ -18,5 +18,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://devmountain.github.io/showcase"
+  "homepage": "https://devmountain.github.io/react-1-afternoon"
 }
