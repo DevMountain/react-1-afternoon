@@ -10,7 +10,9 @@ In this project we will create a react application that solves computer science 
 * .gitignore
 * NPM install
 
-You can find a live finished example <a href="https://devmountain.github.io/react-1-afternoon/">here.</a>
+# Live Example
+
+<a href="https://devmountain.github.io/react-1-afternoon/">Click Me!</a>
 
 <img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/1-2.png" />
 
