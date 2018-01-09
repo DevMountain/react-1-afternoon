@@ -27,7 +27,7 @@ In this project we will create a react application that solves computer science 
 
 ### Summary
 
-In this step we are going to dive into the functionality of the application. If we take a look into the `src` folder we'll see that we have a `components` folder with a `TopicBrowser` and a `Topics` folder. Our `TopicBrowser` component will display a list of topics from the `Topics` folder. Each topic will be its own component. Let's start by creating our `TopicBrowser` component. 
+In this step, we are going to dive into the functionality of the application. If we take a look into the `src` folder we'll see that we have a `components` folder with a `TopicBrowser` and a `Topics` folder. Our `TopicBrowser` component will display a list of topics from the `Topics` folder. Each topic will be its own component.
 
 ### Instructions
 
@@ -188,9 +188,7 @@ export default class TopicBrowser extends Component {
 
 ### Summary
 
-Now that our `TopicBrowser` component is created and we know everything has been exported and imported correctly, let's remove the `<p>` element and start focusing on the functionality of the `TopicBrowser` component.
-
-In this step we will render all of our topics from the `Topics` folder. We will start by creating basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is. We'll then import and render those topic components into our `TopicBrowser` component.
+In this step, we'll render all of our topics from the `Topics` folder, create the basic outlines for each of the topics ( the same exact way we did `TopicBrowser` ) with the only difference being the `<p>` element saying what the component name is, and then import and render those topic components into our `TopicBrowser` component.
 
 ### Instructions
 
@@ -482,9 +480,9 @@ export default class Sum extends Component {
 
 ### Summary
 
-Now that our topic components are created and we know they are exported and imported correctly, let's remove the `<p>` elements and start focusing on the functionality of each topic. In the following steps it's important to understand that there is more than one way to solve a toy problem, if your solution doesn't match mine that's okay. Also, since the following 5 components are very similiar in their structure, only step 3's detailed instructions go into great detail. The other steps after that won't go into much detail.
+In the following steps it's important to understand that there is more than one way to solve a toy problem; if your solution doesn't match mine that's okay. Also, since the following 5 components are very similiar in their structure, only step 3's detailed instructions go into great detail. The other steps after that won't go into much detail.
 
-In this step we'll start with the first topic: `EvenAndOdd`.
+In this step, we'll start with the first topic: `EvenAndOdd`.
 
 ### Instructions
 
@@ -681,7 +679,7 @@ export default class EvenAndOdd extends Component {
 
 ### Summary
 
-In this step we are going to do the same thing but with our component `FilterObject`. 
+In this step, we'll build out the `FilterObject` component.
 
 ### Instructions
 
@@ -900,7 +898,7 @@ export default class FilterObject extends Component {
 
 ### Summary 
 
-In this step we are going to build out our `FilterString` component.
+In this step, we'll build out the `FilterString` component.
 
 ### Instructions
 
@@ -1087,7 +1085,7 @@ export default class FilterString extends Component {
 
 ### Summary
 
-In this step we are going to build our `Palindrome` component.
+In this step, we'll build out the `Palindrome` component.
 
 ### Instructions
 
@@ -1265,7 +1263,7 @@ export default class Palindrome extends Component {
 
 ### Summary
 
-In this step we are going to build our `Sum` component.
+In this step, we'll build out the `Sum` component.
 
 ### Instructions
 
