@@ -912,7 +912,7 @@ In this step, we'll build out the `FilterString` component.
 
 <b>The problem summary:</b> Using a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
 
-<b>The component outline:</b> One paren `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
 
 * Open `src/components/Topics/FilterString.js`.
 * Remove the `<p>` element from the `return` of the `render` method.
