@@ -7,6 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  box-sizing: border-box;
 }
 
 /* Container Elements */
@@ -34,7 +35,7 @@ body {
 }
 
 .filterObjectPB {
-  height: 390px
+  height: 390px;
 }
 
 .filterStringPB {
@@ -49,7 +50,7 @@ body {
   height: 270px;
 }
 
- .resultsBox {
+.resultsBox {
   width: 360px;
   height: 20px;
   padding: 10px;
@@ -86,7 +87,6 @@ body {
   background: transparent;
   margin-bottom: 20px;
 }
-
 
 /* Buttons */
 
@@ -128,4 +128,3 @@ h4 {
   color: #ffffff;
   margin-bottom: 35px;
 }
-

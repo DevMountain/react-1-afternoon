@@ -52,7 +52,7 @@ Let's begin by opening `src/components/TopicBrowser/TopicBrowser.js` and importi
 import React, { Component } from 'react';
 ```
 
-Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see constructor camel case ( meaning the first letter is also captalized ). In React constructor camel case is required for the name of your class. If it is not constructor camel case the component will not mount or render in your application. Since this component is going to browse our topics, I went with the class name of TopicBrowser. 
+Now let's create a basic component that renders a `<p>` element that says "Hello World". We do this by saying `class TopicBrowser extends Component {}`. TopicBrowser is the name of the class, which can be anything you want, usually when dealing with classes it's common to see pascal case ( meaning the first letter is also captalized ). In React pascal case is required for the name of your class. If it is not pascal case the component will not mount or render in your application. Since this component is going to browse our topics, I went with the class name of TopicBrowser.
 
 ```js
 class TopicBrowser extends Component {
@@ -60,7 +60,7 @@ class TopicBrowser extends Component {
 }
 ```
 
-Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}`. This is the method that is called to render our JSX onto the DOM. Inside the `render` method we use a `return` statement to `return` the JSX that will be rendered. 
+Now that we have our component `TopicBrowser` let's have it render the `<p>` element. Since we extended on `Component` we have access to a method called `render() {}`. This is the method that is called to render our JSX onto the DOM. Inside the `render` method we use a `return` statement to `return` the JSX that will be rendered.
 
 ```js
 class TopicBrowser extends Component {
@@ -72,7 +72,7 @@ class TopicBrowser extends Component {
 }
 ```
 
-Then we need to `export` our `TopicBrowser` component so that other files can `import` it. You may have seen two different ways to accomplish this method. One way is exporting it at the end of the file and another way is doing it on the same line as when you declare your class. 
+Then we need to `export` our `TopicBrowser` component so that other files can `import` it. You may have seen two different ways to accomplish this method. One way is exporting it at the end of the file and another way is doing it on the same line as when you declare your class.
 
 <details>
 
@@ -120,7 +120,7 @@ Both ways are completely fine, however I'll be using the same line `export`. Now
 import TopicBrowser from './components/TopicBrowser/TopicBrowser'
 ```
 
-The `import` is clever enough to add on the `.js` extension for us. Now that `src/components/App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `src/components/App.js` should now look like: 
+The `import` is clever enough to add on the `.js` extension for us. Now that `src/components/App.js` has `TopicBrowser` imported we can `render` it the same way rendered our `<p>` element in `TopicBrowser`. The only differencing being to `render` components you wrap the component name in `< />`. Our `src/components/App.js` should now look like:
 
 ```js
 import React, { Component } from 'react';
@@ -193,7 +193,7 @@ In this step, we'll render all of our topics from the `Topics` folder, create th
 ### Instructions
 
 * Create a basic outline for each topic component ( the same exact way we did the `TopicBrowser` component ):
-  * Make sure the name of the class is the same name as the file. 
+  * Make sure the name of the class is the same name as the file.
   * Have the component render a `<p>` element saying the name of the component.
 * Open `src/components/TopicBrowser/TopicBrowser.js`.
 * Import all the topic files from `src/components/Topics` into `src/components/TopicBrowser/TopicBrowser.js`.
@@ -205,7 +205,7 @@ In this step, we'll render all of our topics from the `Topics` folder, create th
 
 <br />
 
-Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered. 
+Let's start by going into our Topics folder. Inside we will see 5 javascript files, inside these files we will create a React component that solves a certain computer science toy problem. The basic outline is going to be similiar across these components with the only difference being the `<p>` element that gets rendered.
 
 Creating a React component:
 * `import React, { Component } from 'react'`
@@ -225,7 +225,7 @@ export default class EvenAndOdd extends Component {
     )
   }
 }
-```  
+```
 
 <details>
 
@@ -316,7 +316,7 @@ import Sum from '../Topics/Sum'
 export default class TopicBrowser extends Component {
   render() {
     return (
-      
+
     )
   }
 }
@@ -488,7 +488,7 @@ In this step, we'll start with the first topic: `EvenAndOdd`.
 
 <b>The problem summary:</b> Given a string of numbers separated by commas, split the numbers into two different arrays. The first being an array of all the even numbers and the second being an array of all the odd numbers.
 
-<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and two `span` elements. 
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and two `span` elements.
 
 * Open `src/components/Topics/EvenAndOdd.js`.
 * Remove the `<p>` element from the `return` of the `render` method.
@@ -557,14 +557,14 @@ render() {
       <button className="confirmationButton"> Split </button>
       <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
       <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
-    </div> 
+    </div>
   )
 }
 ```
 
 What's `JSON.stringify`? This is not a necassary addition, but without it your array would not display as [1,2,3,4] but rather 1234. `JSON.stringify` gives our display a more readable format. You could just do `this.state.evenArray` or `this.state.oddArray` if you want to.
 
-Next let's update our `input` element to handle user input. In React you can use the `onChange` attribute that calls a function every time a user types in the `input` field. 
+Next let's update our `input` element to handle user input. In React you can use the `onChange` attribute that calls a function every time a user types in the `input` field.
 
 ```js
 render() {
@@ -648,18 +648,18 @@ export default class EvenAndOdd extends Component {
   }
 
   assignEvenAndOdds(userInput) {
-    var arr = userInput.split(',');
-    var evens = [];
-    var odds = [];
+    let arr = userInput.split(',');
+    let evens = [];
+    let odds = [];
 
-    for ( var i = 0; i < arr.length; i++ ) {
+    for ( let i = 0; i < arr.length; i++ ) {
       if ( arr[i] % 2 === 0 ) {
         evens.push( parseInt(arr[i], 10) );
       } else {
         odds.push( parseInt(arr[i], 10) );
       }
     }
-    
+
     this.setState({ evenArray: evens, oddArray: odds });
   }
 
@@ -679,11 +679,11 @@ export default class EvenAndOdd extends Component {
 
 </details>
 
-<br /> 
+<br />
 
 <img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/1g.gif" />
 
-## Step 4 
+## Step 4
 
 ### Summary
 
@@ -738,7 +738,7 @@ Let's begin by rendering our component's outline.
   }
 ```
 
-Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep tracck of what the user input is, our unfiltered array, and our filtered array. 
+Now that we have a rough draft of everything our component will need, let's start filling in the functionality. We will use state to keep tracck of what the user input is, our unfiltered array, and our filtered array.
 
 ```js
   constructor() {
@@ -870,10 +870,10 @@ export default class FilterObject extends Component {
   }
 
   filterEmployees(prop) {
-    var employees = this.state.employees;
-    var filteredEmployees = [];
-    
-    for ( var i = 0; i < employees.length; i++ ) {
+    let employees = this.state.employees;
+    let filteredEmployees = [];
+
+    for ( let i = 0; i < employees.length; i++ ) {
       if ( employees[i].hasOwnProperty(prop) ) {
         filteredEmployees.push(employees[i]);
       }
@@ -898,13 +898,13 @@ export default class FilterObject extends Component {
 
 </details>
 
-<br /> 
+<br />
 
 <img src="https://github.com/DevMountain/react-1-afternoon/blob/solution/readme/2g.gif" />
 
 ## Step 5
 
-### Summary 
+### Summary
 
 In this step, we'll build out the `FilterString` component.
 
@@ -912,7 +912,7 @@ In this step, we'll build out the `FilterString` component.
 
 <b>The problem summary:</b> Using a pre-determined array of strings, filter out strings that do not contain a given string. Display a new array populated with the strings that do contain the given string.
 
-<b>The component outline:</b> One paren `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
+<b>The component outline:</b> One parent `div` element, one `h4` element, one `span` element, one `input` element, one `button` element, and another `span` element.
 
 * Open `src/components/Topics/FilterString.js`.
 * Remove the `<p>` element from the `return` of the `render` method.
@@ -1041,7 +1041,7 @@ How you solve the toy problem is up to you, if you can't figure it out check out
 import React, { Component } from 'react';
 
 export default class FilterString extends Component {
-  
+
   constructor() {
     super();
 
@@ -1057,10 +1057,10 @@ export default class FilterString extends Component {
   }
 
   filterNames(userInput) {
-    var names = this.state.names;
-    var filteredNames = [];
+    let names = this.state.names;
+    let filteredNames = [];
 
-    for ( var i = 0; i < names.length; i++ ) {
+    for ( let i = 0; i < names.length; i++ ) {
       if ( names[i].includes(userInput) ) {
         filteredNames.push(names[i]);
       }
@@ -1097,7 +1097,7 @@ In this step, we'll build out the `Palindrome` component.
 
 ### Instructions
 
-<b>The problem summary:</b> Using a given string, determine if it is spelt the same backwards as it is forwards. 
+<b>The problem summary:</b> Using a given string, determine if it is spelt the same backwards as it is forwards.
 
 <b>The component outline:</b> One parent `div` element, one `h4` element, one `input` element, one `button` element, and one `span` element.
 
@@ -1235,8 +1235,8 @@ export default class Palindrome extends Component {
   }
 
   isPalindrome(userInput) {
-    var forwards = userInput;
-    var backwards = userInput;
+    let forwards = userInput;
+    let backwards = userInput;
     backwards = backwards.split('');
     backwards = backwards.reverse();
     backwards = backwards.join('');
@@ -1455,6 +1455,17 @@ export default class Sum extends Component {
 ## Black Diamond
 
 To take this project a step further try to add more toy problems to the project throughout your time at DevMountain. This is completely optional, however this project has the potential to be a `showcase` of your knowledge to solve CS problems.
+
+## Resources
+
+<details>
+
+<summary> <code> Data Types </code> </summary>
+
+* [Understanding JS Data Types](https://codeburst.io/javascript-data-types-explained-347555cd2d4d)
+
+</details>
+
 
 ## Contributions
 
