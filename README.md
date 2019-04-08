@@ -1460,9 +1460,40 @@ To take this project a step further try to add more toy problems to the project 
 
 <details>
 
-<summary> <code> Data Types </code> </summary>
+<summary> <code> Components </code> </summary>
 
-* [Understanding JS Data Types](https://codeburst.io/javascript-data-types-explained-347555cd2d4d)
+```js
+// A typical React component is comprised of several pieces outlined below
+
+// Import statements allow us to import JavaScript from external modules
+// or our own files contained in our project
+import React, { Component } from 'react';
+
+
+// React uses es6 Classes for it's components.
+// We extend from the `Component` module to get access to the `render` method
+class MyComponent extends Component {
+  // The constructor is where we declare our state and other information
+  constructor() {
+    super();
+    // this.state is an object that houses local data our component cares about
+    this.state = {
+      name: 'Steven'
+    };
+  }
+  // render will return JSX (HTML-like syntax). This is what's rendered to the screen
+  render() {
+    // JSX uses HTML-like syntax to create our component content
+    // It uses single curly braces `{}` to inject JavaScript into our HTML
+    return <h1 onClick={() => alert('Clicked!')}>Hello, {this.state.name}!</h1>
+  }
+}
+
+// export allows our component to be `import`ed into another file
+export default MyComponent;
+```
+
+* [JSX](https://reactjs.org/docs/introducing-jsx.html)
 
 </details>
 
