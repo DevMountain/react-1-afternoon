@@ -1,26 +1,37 @@
-body {
+html {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
   font-family: sans-serif;
   background-color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  box-sizing: border-box;
+  padding: 15px;
 }
 
 /* Container Elements */
 .puzzleFeed {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 405px;
 }
 
 .puzzleBox {
-  width: 405px;
+  width: 100%;
   border-radius: 2px;
-  padding: 0px 20px;
+  padding: 15px;
   background-color: #424242;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -30,34 +41,40 @@ body {
   margin-right: 0px;
 }
 
+.puzzleBox:first-of-type {
+  margin-top: 0;
+}
+.puzzleBox:last-of-type {
+  margin-bottom: 0;
+}
+
 .evenAndOddPB {
-  height: 270px;
+  /* height: 270px; */
 }
 
 .filterObjectPB {
-  height: 390px;
+  /* height: 390px */
 }
 
 .filterStringPB {
-  height: 350px;
+  /* height: 350px; */
 }
 
 .palindromePB {
-  height: 225px;
+  /* height: 225px; */
 }
 
 .sumPB {
-  height: 270px;
+  /* height: 270px; */
 }
 
 .resultsBox {
-  width: 360px;
-  height: 20px;
+  width: 100%;
   padding: 10px;
   border-radius: 2px;
   background-color: #303030;
   margin-top: 10px;
-  font-family: Roboto;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff;
@@ -72,8 +89,7 @@ body {
 }
 
 .inputLine {
-  width: 300px;
-  height: 15px;
+  width: 100%;
   font-size: 20px;
   color: #fff;
   padding-bottom: 6px;
@@ -91,7 +107,7 @@ body {
 /* Buttons */
 
 .confirmationButton {
-  width: 380px;
+  width: 100%;
   height: 36px;
   border-radius: 2px;
   background-color: #4fc3f7;
