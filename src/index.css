@@ -48,26 +48,6 @@ body {
   margin-bottom: 0;
 }
 
-.evenAndOddPB {
-  /* height: 270px; */
-}
-
-.filterObjectPB {
-  /* height: 390px */
-}
-
-.filterStringPB {
-  /* height: 350px; */
-}
-
-.palindromePB {
-  /* height: 225px; */
-}
-
-.sumPB {
-  /* height: 270px; */
-}
-
 .resultsBox {
   width: 100%;
   padding: 10px;
