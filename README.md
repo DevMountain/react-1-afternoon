@@ -523,7 +523,7 @@ render() {
   return (
     <div className="puzzleBox evenAndOddPB">
       <h4> Evens and Odds </h4>
-      <input className="inputLine"></input>
+      <input className="inputLine"/>
       <button className="confirmationButton"> Split </button>
       <span className="resultsBox"></span>
       <span className="resultsBox"></span>
@@ -553,7 +553,7 @@ render() {
   return (
    <div className="puzzleBox evenAndOddPB">
       <h4> Evens and Odds </h4>
-      <input className="inputLine"></input>
+      <input className="inputLine"/>
       <button className="confirmationButton"> Split </button>
       <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
       <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
@@ -571,7 +571,7 @@ render() {
   return (
     <div className="puzzleBox evenAndOddPB">
       <h4> Evens and Odds </h4>
-      <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+      <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
       <button className="confirmationButton"> Split </button>
       <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
       <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
@@ -601,7 +601,7 @@ render() {
   return (
     <div className="puzzleBox evenAndOddPB">
       <h4> Evens and Odds </h4>
-      <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+      <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
       <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
       <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
       <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
@@ -667,7 +667,7 @@ export default class EvenAndOdd extends Component {
     return (
       <div className="puzzleBox evenAndOddPB">
         <h4> Evens and Odds </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
         <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
         <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
@@ -730,7 +730,7 @@ Let's begin by rendering our component's outline.
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
         <span className="puzzleText"></span>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterObjectRB"></span>
       </div>
@@ -776,7 +776,7 @@ Next let's update our `span` elements to display our unfiltered and filtered arr
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
@@ -796,7 +796,7 @@ Next let's update our `input` element to handle user input.
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
@@ -816,7 +816,7 @@ Finally let's update our `button` element to handle filtering our employee array
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
         <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
@@ -887,7 +887,7 @@ export default class FilterObject extends Component {
       <div className="puzzleBox filterObjectPB">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.filterEmployees(this.state.userInput) }> Filter </button>
         <span className="resultsBox filterObjectRB"> Filtered: { JSON.stringify(this.state.filteredEmployees, null, 10) } </span>
       </div>
@@ -949,7 +949,7 @@ Let's begin by rendering our component's outline.
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
         <span className="puzzleText"></span>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterStringRB"></span>
       </div>
@@ -979,7 +979,7 @@ Next, let's update our `span` elements to display our unfiltered and filtered ar
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
@@ -999,7 +999,7 @@ Next, let's update our `input` element to handle user input.
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton"> Filter </button>
         <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
@@ -1019,7 +1019,7 @@ Finally, let's update our `button` element to handle filtering our names array.
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
         <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
@@ -1074,7 +1074,7 @@ export default class FilterString extends Component {
       <div className="puzzleBox filterStringPB">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
         <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
       </div>
@@ -1132,7 +1132,7 @@ Let's begin by rendering our component's outline.
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Check </button>
         <span className="resultsBox"></span>
       </div>
@@ -1160,7 +1160,7 @@ Next, let's update our `span` element to display `palindrome`.
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine"></input>
+        <input className="inputLine"/>
         <button className="confirmationButton"> Check </button>
         <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
@@ -1179,7 +1179,7 @@ Next, let's update our `input` element to handle user input
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton"> Check </button>
         <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
@@ -1198,7 +1198,7 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
         <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
@@ -1252,7 +1252,7 @@ export default class Palindrome extends Component {
     return (
       <div className="puzzleBox palindromePB">
         <h4> Palindrome </h4>
-        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+        <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
         <span className="resultsBox"> Palindrome: { this.state.palindrome } </span>
       </div>
@@ -1312,8 +1312,8 @@ Let's begin by rendering our component's outline.
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number"></input>
-        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"/>
+        <input className="inputLine" type="number"/>
         <button className="confirmationButton"> Add </button>
         <span className="resultsBox"></span>
       </div>
@@ -1342,8 +1342,8 @@ Next, let's update our `span` element to display `sum`.
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number"></input>
-        <input className="inputLine" type="number"></input>
+        <input className="inputLine" type="number"/>
+        <input className="inputLine" type="number"/>
         <button className="confirmationButton"> Add </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
@@ -1366,8 +1366,8 @@ Next, let's update our `input` elements to handle user input
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
         <button className="confirmationButton"> Add </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
@@ -1386,8 +1386,8 @@ Finally, let's update our `button` element to update the value of `sum`.
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
@@ -1436,8 +1436,8 @@ export default class Sum extends Component {
     return (
       <div className="puzzleBox sumPB">
         <h4> Sum </h4>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }></input>
-        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }></input>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
+        <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.add(this.state.number1, this.state.number2) }> Add </button>
         <span className="resultsBox"> Sum: {this.state.sum} </span>
       </div>
