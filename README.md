@@ -494,7 +494,7 @@ In this step, we'll start with the first topic: `EvenAndOdd`.
 * Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
-  * `div` - className="puzzleBox evenAndOddPB"
+  * `div` - className="puzzleBox"
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * Both `span`s - className="resultsBox"
@@ -521,7 +521,7 @@ Let's begin by rendering our component's outline.
 ```js
 render() {
   return (
-    <div className="puzzleBox evenAndOddPB">
+    <div className="puzzleBox">
       <h4> Evens and Odds </h4>
       <input className="inputLine"/>
       <button className="confirmationButton"> Split </button>
@@ -551,7 +551,7 @@ Next, let's update our last two `span` elements to display our `evenArray` and `
 ```js
 render() {
   return (
-   <div className="puzzleBox evenAndOddPB">
+   <div className="puzzleBox">
       <h4> Evens and Odds </h4>
       <input className="inputLine"/>
       <button className="confirmationButton"> Split </button>
@@ -569,7 +569,7 @@ Next let's update our `input` element to handle user input. In React you can use
 ```js
 render() {
   return (
-    <div className="puzzleBox evenAndOddPB">
+    <div className="puzzleBox">
       <h4> Evens and Odds </h4>
       <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
       <button className="confirmationButton"> Split </button>
@@ -599,7 +599,7 @@ Now that our `input` functionality is finished, all that's left is getting our `
 ```js
 render() {
   return (
-    <div className="puzzleBox evenAndOddPB">
+    <div className="puzzleBox">
       <h4> Evens and Odds </h4>
       <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
       <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
@@ -665,7 +665,7 @@ export default class EvenAndOdd extends Component {
 
   render() {
     return (
-      <div className="puzzleBox evenAndOddPB">
+      <div className="puzzleBox">
         <h4> Evens and Odds </h4>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => { this.assignEvenAndOdds(this.state.userInput) }}> Split </button>
@@ -699,7 +699,7 @@ In this step, we'll build out the `FilterObject` component.
 * Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterObjectPB"
+  * `div` - className="puzzleBox"
   * The first `span` - className="puzzleText"
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
@@ -727,7 +727,7 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div className="puzzleBox filterObjectPB">
+      <div className="puzzleBox">
         <h4> Filter Object </h4>
         <span className="puzzleText"></span>
         <input className="inputLine"/>
@@ -773,7 +773,7 @@ Next let's update our `span` elements to display our unfiltered and filtered arr
 ```js
   render() {
     return (
-      <div className="puzzleBox filterObjectPB">
+      <div className="puzzleBox">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
         <input className="inputLine"/>
@@ -793,7 +793,7 @@ Next let's update our `input` element to handle user input.
 
   render() {
     return (
-      <div className="puzzleBox filterObjectPB">
+      <div className="puzzleBox">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -813,7 +813,7 @@ Finally let's update our `button` element to handle filtering our employee array
 
   render() {
     return (
-      <div className="puzzleBox filterObjectPB">
+      <div className="puzzleBox">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -884,7 +884,7 @@ export default class FilterObject extends Component {
 
   render() {
     return (
-      <div className="puzzleBox filterObjectPB">
+      <div className="puzzleBox">
         <h4> Filter Object </h4>
         <span className="puzzleText"> Original: { JSON.stringify(this.state.employees, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -918,7 +918,7 @@ In this step, we'll build out the `FilterString` component.
 * Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterStringPB"
+  * `div` - className="puzzleBox"
   * The first `span` - className="puzzleText"
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
@@ -946,7 +946,7 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div className="puzzleBox filterStringPB">
+      <div className="puzzleBox">
         <h4> Filter String </h4>
         <span className="puzzleText"></span>
         <input className="inputLine"/>
@@ -976,7 +976,7 @@ Next, let's update our `span` elements to display our unfiltered and filtered ar
 ```js
   render() {
     return (
-      <div className="puzzleBox filterStringPB">
+      <div className="puzzleBox">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
         <input className="inputLine"/>
@@ -996,7 +996,7 @@ Next, let's update our `input` element to handle user input.
 
   render() {
     return (
-      <div className="puzzleBox filterStringPB">
+      <div className="puzzleBox">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -1016,7 +1016,7 @@ Finally, let's update our `button` element to handle filtering our names array.
 
   render() {
     return (
-      <div className="puzzleBox filterStringPB">
+      <div className="puzzleBox">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -1071,7 +1071,7 @@ export default class FilterString extends Component {
 
   render() {
     return (
-      <div className="puzzleBox filterStringPB">
+      <div className="puzzleBox">
         <h4> Filter String </h4>
         <span className="puzzleText"> Names: { JSON.stringify(this.state.names, null, 10) } </span>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
@@ -1105,7 +1105,7 @@ In this step, we'll build out the `Palindrome` component.
 * Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
-  * `div` - className="puzzleBox filterStringPB"
+  * `div` - className="puzzleBox"
   * `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * `span` - className="resultsBox"
@@ -1130,7 +1130,7 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div className="puzzleBox palindromePB">
+      <div className="puzzleBox">
         <h4> Palindrome </h4>
         <input className="inputLine"/>
         <button className="confirmationButton"> Check </button>
@@ -1158,7 +1158,7 @@ Next, let's update our `span` element to display `palindrome`.
 ```js
   render() {
     return (
-      <div className="puzzleBox palindromePB">
+      <div className="puzzleBox">
         <h4> Palindrome </h4>
         <input className="inputLine"/>
         <button className="confirmationButton"> Check </button>
@@ -1177,7 +1177,7 @@ Next, let's update our `input` element to handle user input
 
   render() {
     return (
-      <div className="puzzleBox palindromePB">
+      <div className="puzzleBox">
         <h4> Palindrome </h4>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton"> Check </button>
@@ -1196,7 +1196,7 @@ Finally, let's update our `button` element to handle setting `palindrome` to `"t
 
   render() {
     return (
-      <div className="puzzleBox palindromePB">
+      <div className="puzzleBox">
         <h4> Palindrome </h4>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
@@ -1250,7 +1250,7 @@ export default class Palindrome extends Component {
 
   render() {
     return (
-      <div className="puzzleBox palindromePB">
+      <div className="puzzleBox">
         <h4> Palindrome </h4>
         <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }/>
         <button className="confirmationButton" onClick={ () => this.isPalindrome(this.state.userInput) }> Check </button>
@@ -1283,7 +1283,7 @@ In this step, we'll build out the `Sum` component.
 * Remove the `<p>` element from the `return` of the `render` method.
 * Add the component outline to the `return` of the `render` method.
 * Add the following `className` props to the outline:
-  * `div` - className="puzzleBox sumPB"
+  * `div` - className="puzzleBox"
   * The two `input` - className="inputLine"
   * `button` - className="confirmationButton"
   * `span` - className="resultsBox"
@@ -1310,7 +1310,7 @@ Let's begin by rendering our component's outline.
 ```js
   render() {
     return (
-      <div className="puzzleBox sumPB">
+      <div className="puzzleBox">
         <h4> Sum </h4>
         <input className="inputLine" type="number"/>
         <input className="inputLine" type="number"/>
@@ -1340,7 +1340,7 @@ Next, let's update our `span` element to display `sum`.
 ```js
   render() {
     return (
-      <div className="puzzleBox sumPB">
+      <div className="puzzleBox">
         <h4> Sum </h4>
         <input className="inputLine" type="number"/>
         <input className="inputLine" type="number"/>
@@ -1364,7 +1364,7 @@ Next, let's update our `input` elements to handle user input
 
   render() {
     return (
-      <div className="puzzleBox sumPB">
+      <div className="puzzleBox">
         <h4> Sum </h4>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
@@ -1384,7 +1384,7 @@ Finally, let's update our `button` element to update the value of `sum`.
 
   render() {
     return (
-      <div className="puzzleBox sumPB">
+      <div className="puzzleBox">
         <h4> Sum </h4>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
@@ -1434,7 +1434,7 @@ export default class Sum extends Component {
 
   render() {
     return (
-      <div className="puzzleBox sumPB">
+      <div className="puzzleBox">
         <h4> Sum </h4>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber1(e.target.value) }/>
         <input className="inputLine" type="number" onChange={ (e) => this.updateNumber2(e.target.value) }/>
